@@ -1,3 +1,45 @@
-body {
-    background-color: black;
+:root {
+    --primaryColor: #1f5473;
+    --secondaryColor: #f4a234;
+    --accentsColor: #c26e32;
+    --ctaColor: #6e1916;
+}
+
+* {
+    margin: 0;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+aside {
+    float: left;
+    margin-right: 2vw;
+}
+
+.recipeButtons {
+    width: 100%;
+}
+
+.steps {
+    width: 100%;
+    margin-top: 2vw;
+    
+}
+
+.list {
+    width: 40%;
+}
+
+.info ul li {
+    list-style: none;
+
+}
+
+.comment {
+    display: grid;
+    grid-template-areas: "img div";
 }
