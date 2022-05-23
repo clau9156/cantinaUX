@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap");
+/*Break points*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap");
 * {
   margin: 0;
 }
@@ -6,13 +8,14 @@
 body {
   max-width: 1100px;
   margin: 0 auto;
-  font-family: Oswald, sans-serif;
 }
 
 h1 {
   margin-top: 3rem;
   margin-bottom: 2rem;
   text-align: center;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
 }
 
 main {
@@ -39,6 +42,7 @@ main form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "Oswald", sans-serif;
 }
 
 form input {
@@ -54,6 +58,8 @@ form input {
 }
 
 .clearfix .signupbtn {
+  width: 6rem;
+  height: 2rem;
   margin-left: 1rem;
   background-color: #1f5473;
   color: white;
@@ -61,7 +67,7 @@ form input {
   border: none;
   padding: 0.5vw 1vw;
   border-radius: 1vw;
-  font-size: 1.8vw;
+  font-size: 3.4vw;
   cursor: pointer;
 }
 
@@ -72,7 +78,7 @@ form input {
   text-decoration: none;
   border-radius: 1vw;
   padding: 0.5vw 1vw;
-  font-size: 1.8vw;
+  font-size: 3.4vw;
   cursor: pointer;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -124,7 +130,7 @@ input[type='file'] {
   color: transparent;
 }
 
-@media screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) {
   main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -138,6 +144,12 @@ input[type='file'] {
     margin-top: 10rem;
     margin-bottom: 3rem;
     text-align: center;
+  }
+  .clearfix .cancelbtn {
+    font-size: 1.4vw;
+  }
+  .clearfix .signupbtn {
+    font-size: 1.4vw;
   }
   .custom-file-input::before {
     margin-top: 15rem;
