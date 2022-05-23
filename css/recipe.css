@@ -33,8 +33,9 @@ main {
 }
 
 .comment {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "img div";
+      grid-template-areas: "img div";
 }
 
 @media only screen and (min-width: 1000px) {
