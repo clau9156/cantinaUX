@@ -1,11 +1,15 @@
+* {
+  margin: 0;
+}
+
 main {
-  max-width: 600px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
-aside {
-  float: left;
-  margin-right: 2vw;
+.hero {
+  height: 40vw;
+  border: 0.2rem solid #f4a234;
 }
 
 .recipeButtons {
@@ -18,11 +22,14 @@ aside {
 }
 
 .list {
-  width: 40%;
+  margin-right: 2vw;
+  border: solid 0.2rem #f4a234;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
 .info ul li {
-  list-style: none;
+  display: block;
 }
 
 .comment {
@@ -30,3 +37,17 @@ aside {
   display: grid;
       grid-template-areas: "img div";
 }
+
+@media only screen and (min-width: 1000px) {
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .list {
+    width: 40%;
+    float: left;
+  }
+}
+
+/*# sourceMappingURL=recipe.css.map */
