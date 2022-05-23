@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap');
+
+
+
 $primaryColor: #1f5473;
 $secondaryColor: #f4a234;
 $accentsColor: #c26e32;
 $ctaColor: #6e1916;
+$whiteSpace: white;
+$titleFont: 'Oswald', sans-serif;
+$paragraphFont: 'Roboto', sans-serif;
+
+/*Break points*/
+
+$breakPoints: (
+    sm:320px,
+    md:480px,
+    lg:768px,
+    xl:1032px
+);
+
 
 
 * {
