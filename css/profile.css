@@ -4,4 +4,83 @@
   margin: 0;
 }
 
-/*# sourceMappingURL=profile.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Oswald, sans-serif;
+}
+
+main {
+  padding: 2rem;
+}
+
+main h1 {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.Details p {
+  font-family: "Roboto", sans-serif;
+  padding: .5rem 0 .5rem 1rem;
+  border: 1px solid;
+  margin: .5rem 0;
+}
+
+article.uploadWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+button.upload {
+  background-color: white;
+  border-radius: 1vw;
+  cursor: pointer;
+  border: solid 1px #1f5473;
+}
+
+div.password button {
+  margin: .5rem 0rem;
+  background-color: white;
+  border: 1px solid #1f5473;
+  border-radius: 1vw;
+  color: #1f5473;
+  cursor: pointer;
+  padding: .5rem .5rem;
+}
+
+div.updateBtn {
+  text-align: right;
+}
+
+div.updateBtn button.cancel-btn {
+  margin: .5rem 0rem;
+  background-color: white;
+  border: 1px solid #1f5473;
+  border-radius: 1vw;
+  color: #1f5473;
+  cursor: pointer;
+  padding: .5rem .5rem;
+  font-size: 3.4vw;
+}
+
+div.updateBtn button.update-btn {
+  margin: .5rem 0rem;
+  background-color: #1f5473;
+  border: 1px solid #1f5473;
+  border-radius: 1vw;
+  color: white;
+  cursor: pointer;
+  padding: .5rem .5rem;
+  font-size: 3.4vw;
+}
