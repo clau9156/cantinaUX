@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+}
+
 body {
   max-width: 1100px;
   margin: 0 auto;
+  font-family: Oswald, sans-serif;
 }
 
 header h1 {
@@ -10,30 +16,78 @@ header h1 {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 form input {
   width: 20rem;
   height: 2rem;
   margin: 1rem 0;
+  border: 1px solid #1f5473;
+  border-radius: .5vw;
 }
 
 .clearfix {
   text-align: right;
 }
 
+.clearfix .signupbtn {
+  margin-left: 1rem;
+  background-color: #1f5473;
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 0.5vw 1vw;
+  border-radius: 1vw;
+  font-size: 1.8vw;
+  cursor: pointer;
+}
+
+.clearfix .cancelbtn {
+  background-color: white;
+  color: #1f5473;
+  border: solid 2px #1f5473;
+  text-decoration: none;
+  border-radius: 1vw;
+  padding: 0.5vw 1vw;
+  font-size: 1.8vw;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .uploader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .custom-file-input::-webkit-file-upload-button {
@@ -43,7 +97,7 @@ form input {
 .custom-file-input::before {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  content: "Upload";
+  content: 'Upload';
   display: inline-block;
   border: 1px solid #999;
   border-radius: 3px;
@@ -66,25 +120,29 @@ form input {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
-input[type=file] {
+input[type='file'] {
   color: transparent;
 }
 
 @media screen and (min-width: 900px) {
   main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-
   header h1 {
     margin-top: 10rem;
     margin-bottom: 3rem;
     text-align: center;
   }
-
   .custom-file-input::before {
     margin-top: 15rem;
   }
+  form {
+    padding-bottom: 4rem;
+  }
 }
-
-/*# sourceMappingURL=signupstyle.css.map */
