@@ -46,8 +46,8 @@
             <h2>Description</h2>
             <p>Text text text text text text text text text text text text text text text text text text text.</p>
         </article>
-        <section class="ingredients list">
-            <table>
+        <section class="list">
+            <table class="ingredients">
                 <thead>
                     <th>Ingredients:</th>
                     <th></th>
@@ -83,7 +83,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table>
+            <table class="utensils">
                 <thead>
                     <th>Utensils:</th>
                 </thead>
@@ -117,8 +117,8 @@
                 <li>Rating: ☆★★★★</li>
             </ul>
         </section> -->
-        <section class="nutrition list">
-            <table>
+        <section class="list">
+            <table class="nutrition">
                 <thead>
                     <th>Nutrition:</th>
                     <th></th>
@@ -188,7 +188,7 @@
                 </ol>
             </article>
         </section>
-        <section>
+        <section class="feedback">
             <div>
                 <h2>Rate:<span>☆☆☆☆☆</span></h2>
             </div>
@@ -222,7 +222,10 @@
                     <form class="commenting">
                         <label for="comment">Comment</label><br>
                         <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
-                        <input type="submit" value="Post">
+                        <div>
+                            <input type="submit" value="Post">
+                        </div>
+                        
                     </form>
                 </section>
             </section>
