@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/recipe.css">
     <title>Recipe</title>
 </head>
 <body>
     <header></header>
     <main>
-        <section>
+        <section class="hero">
             <img src="" alt="Dish">
             <h1>Recipe Title</h1>
         </section>
@@ -18,7 +18,14 @@
             <button>Share</button>
             <button>Print</button>
         </div>
-        <aside class="list">
+        <section class="info">
+            <ul>
+                <li>Time: 00:00</li>
+                <li>Serves: 0</li>
+                <li>Rating: ☆★★★★</li>
+            </ul>
+        </section>
+        <section class="list">
             <table>
                 <thead>
                     <th>Ingredients:</th>
@@ -77,19 +84,19 @@
                     </tr>
                 </tbody>
             </table>
-        </aside>
+        </section>
         <article class="description">
             <h2>Description</h2>
             <p>Text text text text text text text text text text text text text text text text text text text.</p>
         </article>
-        <section class="info">
+        <!-- <section class="info">
             <ul>
                 <li>Time: 00:00</li>
                 <li>Serves: 0</li>
                 <li>Rating: ☆★★★★</li>
             </ul>
-        </section>
-        <section>
+        </section> -->
+        <section class="nutrition">
             <table>
                 <thead>
                     <th>Nutrition:</th>
@@ -145,10 +152,10 @@
                 </ol>
             </article>
             <section>
-                <img src="" alt="Advert">
+                <img src="" alt="Advert" class="advert2">
             </section>
             <article>
-                <ol>
+                <ol start="4">
                     <li>Text text text text text text text text text text text text text text text text text text text.</li>
                     <li>Text text text text text text text text text text text text text text text text text text text.</li> 
                     <li>Text text text text text text text text text text text text text text text text text text text.</li>
@@ -161,9 +168,9 @@
             <div>
                 <h2>Rate:<span>☆☆☆☆☆</span></h2>
             </div>
-            <div>
+            <section>
                 <h2>Comments:</h2>
-                <div class="comments">
+                <section class="comments">
                     <article class="comment">
                         <img src="" alt="Profile Picture">
                         <div>
@@ -189,8 +196,8 @@
                         <label for="comment">Comment</label><br>
                         <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
                     </form>
-                </div>
-            </div>
+                </section>
+            </section>
         </section>
 
     </main>
