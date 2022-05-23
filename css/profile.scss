@@ -1,1 +1,79 @@
 @import "style";
+
+* {
+    box-sizing: border-box;
+    font-family:Oswald, sans-serif;
+}
+main {
+    padding:2rem;
+}
+main h1 {
+    
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        text-align: center;
+        font-size:2rem;   
+      
+}
+h2 {
+    font-size:1rem;
+}
+.Details p {
+    font-family:$paragraphFont;
+    padding:.5rem 0 .5rem 1rem;
+    border: 1px solid;
+    margin:.5rem 0;
+}
+article.uploadWrapper {
+display:flex;
+justify-content: center;
+margin-bottom:2rem;
+}
+
+button.upload {
+    background-color:$whiteSpace;
+    border-radius: 1vw;
+    cursor:pointer;
+    border:solid 1px $primaryColor;
+}
+
+div.password {
+    button{
+        margin:.5rem 0rem;
+        background-color:$whiteSpace;
+        border: 1px solid $primaryColor;
+        border-radius:1vw;
+        color:$primaryColor;
+        cursor:pointer;
+        padding:.5rem .5rem;
+    }
+}
+
+div.updateBtn {
+    text-align:right;
+    button.cancel-btn {
+        margin:.5rem 0rem;
+        background-color:$whiteSpace;
+        border: 1px solid $primaryColor;
+        border-radius:1vw;
+        color:$primaryColor;
+        cursor:pointer;
+        padding:.5rem .5rem;
+        font-size: 3.4vw;
+    }
+    button.update-btn{
+        margin:.5rem 0rem;
+        background-color:$primaryColor;
+        border: 1px solid $primaryColor;
+        border-radius:1vw;
+        color:$whiteSpace;
+        cursor:pointer;
+        padding:.5rem .5rem;
+        font-size: 3.4vw;
+    }
+}
+
+
+
+
+

@@ -34,6 +34,11 @@ main {
     }
 }
 
+main section img {
+    width:2rem;
+    text-align:center;
+}
+
 form input {
     width:20rem;
     height:2rem;
@@ -74,6 +79,7 @@ form input {
 
 // Upload Image
 .uploader {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,6 +87,7 @@ form input {
 
 .custom-file-input::-webkit-file-upload-button {
     visibility: hidden;
+    height:4rem;
 }
 
 .custom-file-input::before {
@@ -95,7 +102,7 @@ form input {
     white-space: nowrap;
     -webkit-user-select: none;
     cursor: pointer;
-    text-shadow: 1px 1px #fff;
+    text-shadow: 1px 1px $whiteSpace;
     font-weight: 700;
     font-size: 10pt;
     color: black;
