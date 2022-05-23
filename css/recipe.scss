@@ -170,13 +170,13 @@ th {
         }
     }
     
-    main {
+    .textInformation {
         max-width: 600px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1.2fr 1fr;
         grid-template-areas: 
-        "hero hero"
+        // "hero hero"
         "recipeButtons recipeButtons"
         "leftSide description"
         "leftSide info"
@@ -186,14 +186,65 @@ th {
     }
 }
 
-// @media only screen and (min-width: 1000px) {
-//     main {
-//         max-width: 600px;
-//         margin: 0 auto;
-//     }
+@media only screen and (min-width: map-get($breakPoints, lg)) {
+    .hero {
+        grid-area: hero;
+        height: 30vw;
+    }
 
-//     .list {
-//         width: 40%;
-//         float: left;
-//     }
-// }
+    .recipeButtons {
+        grid-area: recipeButtons;
+    }
+    
+    .leftSide {
+        grid-area: leftSide;
+    }
+
+    .rightSide {
+        grid-area: rightSide;
+    }
+
+    .description {
+        grid-area: description;
+    }
+
+    .steps {
+        grid-area: steps;
+    }
+
+    .feedback {
+        grid-area: feedback;
+    }
+
+    .info {
+        grid-area: info;
+        border: solid 0.2rem $secondaryColor;
+        border-radius: 1rem;
+        margin: 0 0.7rem;
+        ul {
+            padding: 0;
+        }
+    }
+    
+    .textInformation {
+        max-width: 850px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-areas: 
+        // "hero hero"
+        "recipeButtons recipeButtons"
+        "leftSide description"
+        "leftSide info"
+        "leftSide rightSide"
+        "steps steps"
+        "feedback feedback";
+    }
+}
+
+
+footer {
+    section img {
+        width: 3vw;
+    }
+}

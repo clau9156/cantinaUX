@@ -159,13 +159,64 @@ th {
     padding: 0;
   }
 
-  main {
+  .textInformation {
     max-width: 600px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    grid-template-areas: "hero hero" "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
+    grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
   }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    grid-area: hero;
+    height: 30vw;
+  }
+
+  .recipeButtons {
+    grid-area: recipeButtons;
+  }
+
+  .leftSide {
+    grid-area: leftSide;
+  }
+
+  .rightSide {
+    grid-area: rightSide;
+  }
+
+  .description {
+    grid-area: description;
+  }
+
+  .steps {
+    grid-area: steps;
+  }
+
+  .feedback {
+    grid-area: feedback;
+  }
+
+  .info {
+    grid-area: info;
+    border: solid 0.2rem #f4a234;
+    border-radius: 1rem;
+    margin: 0 0.7rem;
+  }
+  .info ul {
+    padding: 0;
+  }
+
+  .textInformation {
+    max-width: 850px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
+  }
+}
+footer section img {
+  width: 3vw;
 }
 
 /*# sourceMappingURL=recipe.css.map */
