@@ -210,6 +210,12 @@ th {
 
     .steps {
         grid-area: steps;
+        max-width: 600px;
+        margin: 0 auto;
+        // article {
+        //     max-width: 600px;
+        //     margin: 0 auto;
+        // }
     }
 
     .feedback {
