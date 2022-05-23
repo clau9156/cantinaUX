@@ -1,13 +1,22 @@
 @import "style";
 
-main {
-    max-width: 350px;
-    margin: 0 auto;
-}
+// main {
+//     max-width: 350px;
+//     margin: 0 auto;
+// }
 
 .hero {
     height: 40vw;
     border: 0.2rem solid $secondaryColor;
+    position: relative;
+    text-align: center;
+    h1 {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .recipeButtons {
@@ -21,7 +30,7 @@ main {
 }
 
 .list {
-    margin-right: 2vw;
+    margin: 2vw;
     border: solid 0.2rem $secondaryColor;
     border-radius: 1rem;
     padding: 0.5rem;
@@ -29,6 +38,7 @@ main {
 
 .info {
     border-bottom: solid 0.2rem $secondaryColor;
+    text-align: center;
     ul li {
         display: inline;
     }
@@ -37,8 +47,24 @@ main {
 .comment {
     display: grid;
     grid-template-areas: "img div";
+    border: solid 0.2rem $secondaryColor;
+    img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin: 0.5rem;
+    }
 }
 
+
+.commenting {
+    border: solid 0.2rem $secondaryColor;
+    textarea {
+        border: none;
+        resize: none;
+        width: 98%;
+    }
+}
 
 // @media only screen and (min-width: map-get($breakPoints, lg)) {
 
