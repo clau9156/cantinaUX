@@ -28,14 +28,16 @@ main {
   padding: 0.5rem;
 }
 
+.info {
+  border-bottom: solid 0.2rem #f4a234;
+}
 .info ul li {
-  display: block;
+  display: inline;
 }
 
 .comment {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "img div";
+  grid-template-areas: "img div";
 }
 
 @media only screen and (min-width: 1000px) {

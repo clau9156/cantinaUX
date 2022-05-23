@@ -12,7 +12,6 @@ main {
 
 .recipeButtons {
     width: 100%;
-
 }
 
 .steps {
@@ -28,8 +27,11 @@ main {
     padding: 0.5rem;
 }
 
-.info ul li {
-    display: block;
+.info {
+    border-bottom: solid 0.2rem $secondaryColor;
+    ul li {
+        display: inline;
+    }
 }
 
 .comment {
