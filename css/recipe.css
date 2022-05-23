@@ -24,7 +24,7 @@
 
 .steps {
   width: 100%;
-  margin-top: 2vw;
+  margin-top: 2rem;
 }
 
 .list {
@@ -52,6 +52,10 @@
   height: 5rem;
   border-radius: 50%;
   margin: 0.5rem;
+}
+
+td:first-child {
+  width: 80%;
 }
 
 .commenting {
