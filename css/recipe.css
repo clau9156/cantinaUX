@@ -8,6 +8,7 @@
   height: 40vw;
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 .hero h1 {
   z-index: 1;
@@ -15,6 +16,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.hero img {
+  width: 100%;
+  opacity: 75%;
 }
 
 .recipeButtons {
@@ -38,7 +43,7 @@
 }
 
 .description {
-  margin: 0 1rem;
+  margin: 1rem;
 }
 
 .list {
@@ -113,6 +118,54 @@ th {
   cursor: pointer;
   color: white;
   margin-right: 1rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .hero {
+    grid-area: hero;
+  }
+
+  .recipeButtons {
+    grid-area: recipeButtons;
+  }
+
+  .leftSide {
+    grid-area: leftSide;
+  }
+
+  .rightSide {
+    grid-area: rightSide;
+  }
+
+  .description {
+    grid-area: description;
+  }
+
+  .steps {
+    grid-area: steps;
+  }
+
+  .feedback {
+    grid-area: feedback;
+  }
+
+  .info {
+    grid-area: info;
+    border: solid 0.2rem #f4a234;
+    border-radius: 1rem;
+    margin: 0 0.7rem;
+  }
+  .info ul {
+    padding: 0;
+  }
+
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas: "hero hero" "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
+  }
 }
 
 /*# sourceMappingURL=recipe.css.map */
