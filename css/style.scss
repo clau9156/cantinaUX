@@ -92,43 +92,35 @@ body {
 footer {
     background-color: $primaryColor;
     width: 100%;
-    height: 13.5vw;
+    height: 70vh;
     bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     color: $whiteSpace;
     font-family: $paragraphFont ;
     position: relative;
     overflow: hidden;
 
     .footerLogo img {
-        width: 12vw;
+        width: 100%;
         height: auto;
         position: absolute;
         z-index: 1;
-        top: 0vw;
+        top: -9vw;
     }
 
     section img {
-        width: 3vw;
+        width: 10vw;
     }
 
     div {
         width: 100%;
-        grid-column-start: 1;
-        grid-column: span 2 / span 2;
-        margin-top: 1vw;
-        margin-left: 2vw;
-
 
         section {
             display: flex;
-            justify-content: space-between;
-            margin-top: 6vw;
+            justify-content: space-around;
+            margin-top: 45vw;
 
             img {
                 z-index: 2;
-
             }
         }
     }
@@ -136,11 +128,15 @@ footer {
     .copyRight {
         position: absolute;
         bottom: 1vw;
-        left: 47.5vw;
+        left: 40.5vw;
     }
 
     >section {
-        grid-column-start: 6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
 
         a {
             text-decoration: none;
@@ -160,7 +156,7 @@ footer {
 
     li {
         list-style-type: none;
-        padding-bottom: 0.25vw;
+        padding-bottom: 2vw;
 
 
     }
@@ -171,10 +167,151 @@ footer {
     }
 
     section {
-        margin-top: 1vw;
+        margin-top: 5vw;
     }
 }
 
-@media only screen and (min-width: map-get($breakPoints, lg)) {}
+@media only screen and (min-width: map-get($breakPoints, md)) {
+    footer {
+        height: 35vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
-@media only screen and (min-width: map-get($breakPoints, md)) {}
+        .footerLogo img {
+            width: 25vw;
+            top: 0vw;
+        }
+
+        section img {
+            width: 5vw;
+        }
+
+        div {
+            grid-column-start: 1;
+            margin-top: 1vw;
+            margin-left: 2vw;
+
+            section {
+                justify-content: space-between;
+                margin-top: 15vw;
+
+                :nth-child(4) {
+                    display: block;
+                }
+
+            }
+        }
+
+        .copyRight {
+            left: 47.5vw;
+        }
+
+        >section {
+            grid-column-start: 3;
+            text-align: right;
+
+            :nth-child(4) {
+                display: block;
+            }
+        }
+
+        :nth-child(4) {
+            display: none;
+        }
+
+        :last-child {
+            grid-column-start: 4;
+
+        }
+
+        li {
+            padding-bottom: 2.5vw;
+
+        }
+
+        h2 {
+            padding-bottom: 0.5vw;
+        }
+
+        section {
+            margin-top: 1vw;
+        }
+    }
+
+}
+
+@media only screen and (min-width: map-get($breakPoints, lg)) {
+    footer {
+        height: 13.5vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        .footerLogo img {
+            width: 13.5vw;
+            top: 0vw;
+        }
+
+        section img {
+            width: 2.5vw;
+        }
+
+        div {
+            grid-column-start: 1;
+            margin-top: 1vw;
+            margin-left: 2vw;
+
+            section {
+                justify-content: space-between;
+                margin-top: 6vw;
+                width: 20vw;
+
+            }
+        }
+
+        .copyRight {
+            left: 47.5vw;
+        }
+
+        >section {
+            grid-column-start: 5;
+            text-align: right;
+            align-items: unset;
+
+        }
+
+        >:nth-child(4) {
+
+            display: block;
+            text-align: right;
+            grid-column: 6/ span 2;
+            width: 80%;
+            margin-right: 5vw;
+
+        }
+
+        >:last-child {
+            grid-column-start: 8;
+
+        }
+
+        li {
+            padding-bottom: 0.5vw;
+            width: 100%;
+
+            a {
+                width: 100%;
+            }
+
+        }
+
+        h2 {
+            padding-bottom: 0.5vw;
+            width: 100%;
+        }
+
+        section {
+            margin-top: 1vw;
+            margin-right: 1vw;
+        }
+    }
+}
