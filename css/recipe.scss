@@ -7,6 +7,7 @@
 
 // HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO
 .hero {
+    grid-area: hero;
     height: 40vw;
     position: relative;
     text-align: center;
@@ -28,6 +29,7 @@
 
 // info
 .info {
+    grid-area: info;
     border-bottom: solid 0.2rem $secondaryColor;
     text-align: center;
     ul li {
@@ -37,6 +39,7 @@
 
 // recipeButtons
 .recipeButtons {
+    grid-area: recipeButtons;
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -55,6 +58,7 @@
 
 // description
 .description {
+    grid-area: description;
     margin: 1rem;
 }
 // list
@@ -67,12 +71,12 @@
         text-align: left;
     }
 }
+
 // ingredients & utensils
 .ingredients td:last-child {
     width: 10%;
     text-align: right;
 }
-// utensils
 // nutrition
 .nutrition {
     td:first-child {
@@ -86,86 +90,66 @@
 
 // steps
 .steps {
+    grid-area: steps;
     margin: 2rem;
 }
+
 // feedback
 .feedback {
+    grid-area: feedback;
     margin: 0.5rem;
-}
-
-.comment {
-    display: grid;
-    grid-template-areas: "img div";
-    border: solid 0.2rem $secondaryColor;
-    img {
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        margin: 0.5rem;
-    }
-    div {
-        margin: 0.5rem;
-    }
-}
-
-.commenting {
-    border: solid 0.2rem $secondaryColor;
-    textarea {
-        border: none;
-        resize: none;
-        width: 98%;
-    }
-    div {
-        width: 100%;
-        height: 1.5rem;
-        input {
-            background-color: $ctaColor;
-            float: right;
-            padding: 0.5vw 1vw;
-            border: $ctaColor solid 0.1vw;
-            border-radius: 1vw;
-            // font-size: 1.8vw;
-            cursor: pointer;
-            color: white;
-            margin-right: 1rem;
+    .comment {
+        display: grid;
+        grid-template-areas: "img div";
+        border: solid 0.2rem $secondaryColor;
+        img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            margin: 0.5rem;
         }
-    } 
+        div {
+            margin: 0.5rem;
+        }
+    }
+    .commenting {
+        border: solid 0.2rem $secondaryColor;
+        textarea {
+            border: none;
+            resize: none;
+            width: 98%;
+        }
+        div {
+            width: 100%;
+            height: 2.2rem;
+            input {
+                background-color: $ctaColor;
+                float: right;
+                padding: 0.5vw 1vw;
+                border: $ctaColor solid 0.1vw;
+                border-radius: 1vw;
+                // font-size: 1.8vw;
+                cursor: pointer;
+                color: white;
+                margin-right: 1rem;
+            }
+        } 
+    }
 }
 
 //  and (max-width: map-get($breakPoints, lg))
 
 
 @media only screen and (min-width: map-get($breakPoints, md)) {
-    .hero {
-        grid-area: hero;
-    }
-
-    .recipeButtons {
-        grid-area: recipeButtons;
-    }
-    
     .leftSide {
         grid-area: leftSide;
     }
-
+    
     .rightSide {
         grid-area: rightSide;
     }
 
-    .description {
-        grid-area: description;
-    }
-
-    .steps {
-        grid-area: steps;
-    }
-
-    .feedback {
-        grid-area: feedback;
-    }
-
     .info {
-        grid-area: info;
         border: solid 0.2rem $secondaryColor;
         border-radius: 1rem;
         margin: 0 0.7rem;
@@ -192,42 +176,23 @@
 
 @media only screen and (min-width: map-get($breakPoints, lg)) {
     .hero {
-        grid-area: hero;
         height: 30vw;
     }
 
-    .recipeButtons {
-        grid-area: recipeButtons;
-    }
-    
     .leftSide {
         grid-area: leftSide;
     }
-
+    
     .rightSide {
         grid-area: rightSide;
     }
 
-    .description {
-        grid-area: description;
-    }
-
     .steps {
-        grid-area: steps;
         max-width: 600px;
         margin: 0 auto;
-        // article {
-        //     max-width: 600px;
-        //     margin: 0 auto;
-        // }
-    }
-
-    .feedback {
-        grid-area: feedback;
     }
 
     .info {
-        grid-area: info;
         border: solid 0.2rem $secondaryColor;
         border-radius: 1rem;
         margin: 0 0.7rem;
