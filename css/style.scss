@@ -46,7 +46,7 @@ $breakPoints: (
 
 header {
     width: 100%;
-    height: 6vw;
+    height: 20vw;
     display: flex;
     justify-content: space-between;
     font-family: $paragraphFont;
@@ -55,10 +55,12 @@ header {
     position: fixed;
     top: 0;
     z-index: 10;
+    font-size: $iphoneP;
+
 
     div {
-        height: 6vw;
-        width: 6vw;
+        height: 100%;
+        width: auto;
 
         img {
             width: auto;
@@ -67,20 +69,251 @@ header {
     }
 
     nav {
+        display: none;
+    }
+
+    /* BURGER MENU BURGER MENU BURGER MENU BURGER MENU  BURGER MENU  BURGER MENU  BURGER MENU  BURGER MENU  BURGER MENU */
+
+    #menuToggle {
+        display: block;
+        position: fixed;
+        top: 6vw;
+        left: 90vw;
+        z-index: 1;
+        border-radius: 0.3vw;
+
+        input {
+            display: block;
+            width: 10vw;
+            height: 10vw;
+            position: absolute;
+            top: -1vw;
+            left: -8vw;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+        }
+
+        span {
+            display: block;
+            width: 10vw;
+            height: 1.5vw;
+            left: -6vw;
+            margin-bottom: 1.4vw;
+            position: relative;
+            background-color: $secondaryColor;
+            border-radius: 1.5vw;
+            z-index: 1;
+            transform-origin: 0.2vw 0;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                opacity 0.55s ease;
+        }
+
+        span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+        input:checked~span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-0.5vw, -0.11vw);
+        }
+
+        input:checked~span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        input:checked~span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(-0.1vw, 0.1vw);
+        }
+
+        input:checked~#menuB {
+            transform: none;
+        }
+    }
+
+    #menuB {
+        position: absolute;
         width: 30vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        height: 30vw;
+        left: -20vw;
+        margin: 1vw 0 0 0;
+        padding: 1vw;
+        text-align: center;
+        border-radius: 2vw;
+        list-style: none;
+        display: grid;
+        background-color: rgba($color: $secondaryColor, $alpha: 0.9);
+        transform-origin: 0% 0%;
+        transform: translate(32vw, 0);
+        transition: transform 1s cubic-bezier(0.68, 0.39, 0.16, 1.31);
 
         a {
             text-decoration: none;
-            color: $secondaryColor;
-
+            color: $ctaColor;
         }
-
     }
 
+
 }
+
+@media only screen and (min-width: map-get($breakPoints, md)) {
+    header {
+        height: 10vw;
+        font-size: $ipadP;
+
+        nav {
+            display: block;
+            width: 60vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+
+            a {
+                text-decoration: none;
+                color: $secondaryColor;
+
+            }
+
+            div:first-of-type {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 5vw;
+                height: 5vw;
+                position: absolute;
+                top: 2.2vw;
+                left: 53vw;
+            }
+
+            input {
+                display: block;
+                width: 5vw;
+                height: 5vw;
+                cursor: pointer;
+                z-index: 2;
+                border-radius: 50%;
+                opacity: 0;
+            }
+
+            input:checked+#userMenu {
+                display: grid;
+            }
+
+            #userMenu {
+                display: none;
+                position: fixed;
+                top: 4.5vw;
+                left: 74vw;
+                width: 20vw;
+                height: 15vw;
+                margin: 1vw 0 0 0;
+                padding: 1vw;
+                text-align: center;
+                border-radius: 0.5vw;
+                list-style: none;
+                background-color: rgba($color: $secondaryColor, $alpha: 0.9);
+
+                a {
+                    color: $ctaColor;
+                }
+            }
+
+            img {
+                height: 5vw;
+                width: 5vw;
+                background-color: $whiteSpace;
+                border-radius: 50%;
+            }
+        }
+
+        #menuToggle {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakPoints, lg)) {
+    header {
+        height: 6vw;
+        font-size: $pcP;
+
+        nav {
+            width: 45vw;
+
+            img {
+                width: 4vw;
+                height: 4vw;
+            }
+
+            div:first-of-type {
+
+                width: 4vw;
+                height: 4vw;
+                top: 1vw;
+                left: 39.5vw;
+            }
+
+            #userMenu {
+                top: 2.5vw;
+                left: 80vw;
+                width: 15vw;
+                height: 12vw;
+            }
+
+            input {
+                width: 5vw;
+                height: 5vw;
+
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakPoints, xl)) {
+    header {
+
+        font-size: 1vw;
+
+        nav {
+            width: 30vw;
+
+            img {
+                width: 4vw;
+                height: 4vw;
+            }
+
+            div:first-of-type {
+
+                width: 4vw;
+                height: 4vw;
+                top: 1vw;
+                left: 24.7vw;
+            }
+
+            #userMenu {
+                left: 85vw;
+                width: 10vw;
+                height: 8vw;
+            }
+
+            input {
+                width: 5vw;
+                height: 5vw;
+
+                opacity: 0;
+            }
+        }
+    }
+}
+
+
+
 
 /*BODY      BODY        BODY        BODY        BODY        BODY        BODY        BODY        BODY*/
 body {
@@ -92,12 +325,13 @@ body {
 footer {
     background-color: $primaryColor;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     bottom: 0;
     color: $whiteSpace;
     font-family: $paragraphFont ;
     position: relative;
     overflow: hidden;
+    font-size: $iphoneP;
 
     .footerLogo img {
         width: 100%;
@@ -164,6 +398,7 @@ footer {
     h2 {
         font-family: $titleFont;
         padding-bottom: 0.5vw;
+        font-size: $iphoneH2;
     }
 
     section {
@@ -176,6 +411,7 @@ footer {
         height: 35vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-size: $ipadP;
 
         .footerLogo img {
             width: 25vw;
@@ -231,6 +467,8 @@ footer {
 
         h2 {
             padding-bottom: 0.5vw;
+            font-size: $ipadH2;
+            width: 80%;
         }
 
         section {
@@ -245,10 +483,11 @@ footer {
         height: 13.5vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        font-size: $pcP;
 
         .footerLogo img {
             width: 13.5vw;
-            top: 0vw;
+            top: -1vw;
         }
 
         section img {
@@ -307,11 +546,22 @@ footer {
         h2 {
             padding-bottom: 0.5vw;
             width: 100%;
+            font-size: $pcH2;
         }
 
         section {
             margin-top: 1vw;
             margin-right: 1vw;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakPoints, lg)) {
+    footer {
+        font-size: 1vw;
+
+        h2 {
+            font-size: 1.8vw;
         }
     }
 }
