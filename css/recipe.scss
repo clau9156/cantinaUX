@@ -19,10 +19,15 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
         // color: $whiteSpace;
+        // backdrop-filter: grayscale(0.5);
     }
     img {
         width: 100%;
-        opacity: 75%;
+        // opacity: 75%;
+        filter: blur(4px);
+        position: absolute;
+        top: -5vw;
+        left: 0;
     }
 }
 
@@ -51,7 +56,7 @@ main {
         border-radius: 0.5vw;
         // font-size: 1.8vw;
         cursor: pointer;
-        color: white;
+        color: $whiteSpace;
         margin-right: 1rem;
     }
 }
@@ -96,6 +101,12 @@ main {
 .steps {
     grid-area: steps;
     margin: 2rem;
+    ol {
+        margin-top: 1rem;
+        li {
+            margin-bottom: 1.5rem;
+        }
+    }
 }
 
 // feedback

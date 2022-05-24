@@ -109,7 +109,10 @@ main {
 }
 .hero img {
   width: 100%;
-  opacity: 75%;
+  filter: blur(4px);
+  position: absolute;
+  top: -5vw;
+  left: 0;
 }
 
 .info {
@@ -173,6 +176,12 @@ main {
 .steps {
   grid-area: steps;
   margin: 2rem;
+}
+.steps ol {
+  margin-top: 1rem;
+}
+.steps ol li {
+  margin-bottom: 1.5rem;
 }
 
 .feedback {
