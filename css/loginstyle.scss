@@ -1,6 +1,6 @@
 @import "style";
 * {
-    font-family:Oswald, sans-serif;
+    font-family:$paragraphFont, sans-serif;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 main form label {
     text-align: left;
     width:20rem;
-    font-family: Oswald;
+    font-family: $titleFont;
 }
 
 form input {
@@ -42,17 +42,18 @@ form a {
     margin-top: 10rem;
     margin-bottom: 4rem;
     text-align: center;
-    font-family: Oswald, sans-serif;
+    font-family: $titleFont;
     font-size:2rem;
   }
 
   .clearfix {
       width:20rem;
       text-align: right;
+      margin-bottom:2rem;
       .Signupbtn {
         background-color:$whiteSpace;
-        color:$primaryColor;
-        border: solid 2px $primaryColor;
+        color:$ctaColor;
+        border: solid 2px $ctaColor;
         text-decoration:none;
         border-radius: 1vw;
         padding: 0.5vw 1vw;
@@ -62,8 +63,8 @@ form a {
       }
       .Loginbtn{
         margin-left:1rem;
-    background-color:$primaryColor;
-    color:white;
+    background-color:$ctaColor;
+    color:$whiteSpace;
     text-decoration:none;
     border:none;
     padding: 0.5vw 1vw;
