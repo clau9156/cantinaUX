@@ -2,8 +2,47 @@
 /*Break points*/
 * {
   margin: 0;
+  padding: 0;
 }
 
+/*HEADER        HEADER      HEADER      HEADER      HEADER      HEADER*/
+header {
+  width: 100%;
+  height: 7vw;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header div {
+  background-color: blue;
+  height: 7vw;
+  width: 7vw;
+}
+
+header nav {
+  width: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: blueviolet;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+/*MAIN      MAIN    MAIN      MAIN      MAIN      MAIN      MAIN      MAIN*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -29,7 +68,9 @@ h2 {
   font-family: "Roboto", sans-serif;
   padding: .5rem 0 .5rem 1rem;
   border: 1px solid;
+  border-radius: 1vw;
   margin: .5rem 0;
+  width: 85vw;
 }
 
 article.uploadWrapper {
@@ -47,14 +88,15 @@ button.upload {
   border-radius: 1vw;
   cursor: pointer;
   border: solid 1px #1f5473;
+  padding: .5rem .5rem;
 }
 
 div.password button {
   margin: .5rem 0rem;
   background-color: white;
-  border: 1px solid #1f5473;
+  border: 1px solid #6e1916;
   border-radius: 1vw;
-  color: #1f5473;
+  color: #6e1916;
   cursor: pointer;
   padding: .5rem .5rem;
 }
@@ -66,9 +108,9 @@ div.updateBtn {
 div.updateBtn button.cancel-btn {
   margin: .5rem 0rem;
   background-color: white;
-  border: 1px solid #1f5473;
+  border: 1px solid #6e1916;
   border-radius: 1vw;
-  color: #1f5473;
+  color: #6e1916;
   cursor: pointer;
   padding: .5rem .5rem;
   font-size: 3.4vw;
@@ -76,11 +118,87 @@ div.updateBtn button.cancel-btn {
 
 div.updateBtn button.update-btn {
   margin: .5rem 0rem;
-  background-color: #1f5473;
-  border: 1px solid #1f5473;
+  background-color: #6e1916;
+  border: 1px solid #6e1916;
   border-radius: 1vw;
   color: white;
   cursor: pointer;
   padding: .5rem .5rem;
   font-size: 3.4vw;
+}
+
+div.deleteWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.deleteWrapper button.delete-btn {
+  text-align: center;
+  margin: 1rem 0;
+  background-color: #6e1916;
+  color: white;
+  border-radius: 1vw;
+  padding: .5rem .5rem;
+  font-size: 3.4vw;
+  border: none;
+  cursor: pointer;
+}
+
+section.yourRecipes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+section.yourRecipes h2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+section.yourRecipes img {
+  text-align: center;
+  width: 100%;
+}
+
+section.yourRecipes ul.container {
+  margin-top: 2rem;
+  list-style-type: none;
+  border: 1px solid #1f5473;
+}
+
+div.recipeDetails {
+  text-align: center;
+}
+
+div.recipeDetails div.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
 }

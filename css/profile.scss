@@ -22,7 +22,9 @@ h2 {
     font-family:$paragraphFont;
     padding:.5rem 0 .5rem 1rem;
     border: 1px solid;
+    border-radius: 1vw;
     margin:.5rem 0;
+    width:85vw;
 }
 article.uploadWrapper {
 display:flex;
@@ -35,15 +37,17 @@ button.upload {
     border-radius: 1vw;
     cursor:pointer;
     border:solid 1px $primaryColor;
+    padding:.5rem .5rem;
+
 }
 
 div.password {
     button{
         margin:.5rem 0rem;
         background-color:$whiteSpace;
-        border: 1px solid $primaryColor;
+        border: 1px solid $ctaColor;
         border-radius:1vw;
-        color:$primaryColor;
+        color:$ctaColor;
         cursor:pointer;
         padding:.5rem .5rem;
     }
@@ -54,17 +58,17 @@ div.updateBtn {
     button.cancel-btn {
         margin:.5rem 0rem;
         background-color:$whiteSpace;
-        border: 1px solid $primaryColor;
+        border: 1px solid $ctaColor;
         border-radius:1vw;
-        color:$primaryColor;
+        color:$ctaColor;
         cursor:pointer;
         padding:.5rem .5rem;
         font-size: 3.4vw;
     }
     button.update-btn{
         margin:.5rem 0rem;
-        background-color:$primaryColor;
-        border: 1px solid $primaryColor;
+        background-color:$ctaColor;
+        border: 1px solid $ctaColor;
         border-radius:1vw;
         color:$whiteSpace;
         cursor:pointer;
@@ -72,6 +76,60 @@ div.updateBtn {
         font-size: 3.4vw;
     }
 }
+
+div.deleteWrapper {
+    display:flex;
+    justify-content:center;
+
+    button.delete-btn{
+        text-align: center;
+        margin:1rem 0;
+        background-color: $ctaColor;
+        color:$whiteSpace;
+        border-radius:1vw;
+        padding:.5rem .5rem;
+        font-size: 3.4vw;
+        border:none;
+        cursor:pointer;
+    
+    }
+}
+
+section.yourRecipes{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:2rem;
+
+    h2 {
+        font-size:1.2rem;
+        margin-top:2rem;
+        text-align: center;
+    }
+    
+    img {
+        text-align: center;
+        width:100%;
+    }
+    ul.container {
+        margin-top:2rem;
+        list-style-type:none;
+        border: 1px solid $primaryColor;
+    }
+}
+
+div.recipeDetails{
+    text-align:center;
+    div.buttons{
+        display:flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        margin-top:2rem;
+    }
+}
+
 
 
 
