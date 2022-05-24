@@ -5,6 +5,7 @@
 //     margin: 0 auto;
 // }
 
+// HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO
 .hero {
     height: 40vw;
     position: relative;
@@ -23,6 +24,18 @@
     }
 }
 
+// textInformation textInformation textInformation textInformation 
+
+// info
+.info {
+    border-bottom: solid 0.2rem $secondaryColor;
+    text-align: center;
+    ul li {
+        display: inline;
+    }
+}
+
+// recipeButtons
 .recipeButtons {
     width: 100%;
     margin-top: 1rem;
@@ -40,27 +53,44 @@
     }
 }
 
-.steps {
-    margin: 2rem;
-}
-
+// description
 .description {
     margin: 1rem;
 }
-
+// list
 .list {
     margin: 2vw;
     border: solid 0.2rem $secondaryColor;
     border-radius: 1rem;
     padding: 0.5rem;
+    th {
+        text-align: left;
+    }
+}
+// ingredients & utensils
+.ingredients td:last-child {
+    width: 10%;
+    text-align: right;
+}
+// utensils
+// nutrition
+.nutrition {
+    td:first-child {
+        width: 70%;
+    }
+    td:last-child {
+        width: 10%;
+        text-align: right;
+    }
 }
 
-.info {
-    border-bottom: solid 0.2rem $secondaryColor;
-    text-align: center;
-    ul li {
-        display: inline;
-    }
+// steps
+.steps {
+    margin: 2rem;
+}
+// feedback
+.feedback {
+    margin: 0.5rem;
 }
 
 .comment {
@@ -77,32 +107,6 @@
         margin: 0.5rem;
     }
 }
-
-
-.ingredients td:last-child {
-    width: 10%;
-    text-align: right;
-}
-
-.nutrition {
-    td:first-child {
-        width: 70%;
-    }
-    td:last-child {
-        width: 10%;
-        text-align: right;
-    }
-}
-
-
-th {
-    text-align: left;
-}
-
-.feedback {
-    margin: 0.5rem;
-}
-
 
 .commenting {
     border: solid 0.2rem $secondaryColor;
