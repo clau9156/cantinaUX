@@ -38,9 +38,12 @@ header {
     color: $whiteSpace;
 
     div {
-        height: 5vw;
-        width: 5vw;
-        padding: 0.75vw;
+        height: 6vw;
+        width: 6vw;
+        img {
+            width: auto;
+            height: 100%;
+        }
     }
 
     nav {
@@ -71,6 +74,10 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     color: $whiteSpace;
     font-family: $paragraphFont ;
+    
+    section img {
+        width: 3vw;
+    }
 
     div {
         width: 100%;
