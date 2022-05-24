@@ -10,31 +10,39 @@ header {
   width: 100%;
   height: 7vw;
   background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 header div {
   background-color: blue;
   height: 7vw;
   width: 7vw;
 }
+
 header nav {
   width: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: blueviolet;
 }
+
 header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 header nav ul li {
   list-style-type: none;
 }
 
 /*MAIN      MAIN    MAIN      MAIN      MAIN      MAIN      MAIN      MAIN*/
-main {
-  font-family: "Roboto", sans-serif;
-}
-
 .hero {
   grid-area: hero;
   height: 40vw;
@@ -42,13 +50,16 @@ main {
   text-align: center;
   overflow: hidden;
 }
+
 .hero h1 {
   z-index: 1;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 .hero img {
   width: 100%;
   opacity: 75%;
@@ -59,6 +70,7 @@ main {
   border-bottom: solid 0.2rem #f4a234;
   text-align: center;
 }
+
 .info ul li {
   display: inline;
 }
@@ -69,6 +81,7 @@ main {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+
 .recipeButtons button {
   background-color: #6e1916;
   float: right;
@@ -91,6 +104,7 @@ main {
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
+
 .list th {
   text-align: left;
 }
@@ -107,6 +121,7 @@ main {
 .nutrition td:first-child {
   width: 70%;
 }
+
 .nutrition td:last-child {
   width: 10%;
   text-align: right;
@@ -121,21 +136,26 @@ main {
   grid-area: feedback;
   margin: 0.5rem;
 }
+
 .feedback .comment {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: max-content;
   grid-template-areas: "img div";
   border: solid 0.2rem #f4a234;
 }
+
 .feedback .comment img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
   margin: 0.5rem;
 }
+
 .feedback .comment div {
   margin: 0.5rem;
 }
+
 .feedback .commenting {
   border: solid 0.2rem #f4a234;
   padding-top: 0.5rem;
@@ -143,15 +163,18 @@ main {
 .feedback .commenting label {
   padding: 0 0 0 1rem;
 }
+
 .feedback .commenting textarea {
   border: none;
   resize: none;
   width: 98%;
 }
+
 .feedback .commenting div {
   width: 100%;
   height: 2.2rem;
 }
+
 .feedback .commenting div input {
   background-color: #6e1916;
   float: right;
@@ -165,10 +188,14 @@ main {
 
 @media only screen and (min-width: 480px) {
   .leftSide {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
     grid-area: leftSide;
   }
-
   .rightSide {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
     grid-area: rightSide;
   }
 
@@ -187,33 +214,36 @@ main {
   .info ul {
     padding: 0;
   }
-
   .textInformation {
     max-width: 500px;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
+    -ms-grid-columns: 1.2fr 1fr;
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
   }
 }
+
 @media only screen and (min-width: 768px) {
   .hero {
     height: 30vw;
   }
-
   .leftSide {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
     grid-area: leftSide;
   }
-
   .rightSide {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
     grid-area: rightSide;
   }
-
   .steps {
     max-width: 600px;
     margin: 0 auto;
   }
-
   .info {
     border: solid 0.2rem #f4a234;
     border-radius: 0.5rem;
@@ -222,17 +252,17 @@ main {
   .info ul {
     padding: 0;
   }
-
   .textInformation {
     max-width: 850px;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
+    -ms-grid-columns: 1.2fr 1fr;
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
   }
 }
+
 footer section img {
   width: 3vw;
 }
-
-/*# sourceMappingURL=recipe.css.map */
