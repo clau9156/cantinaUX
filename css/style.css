@@ -13,7 +13,11 @@ header {
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
   background-color: #1f5473;
+  backdrop-filter: opacity(50%);
   color: white;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 header div {
   height: 6vw;
@@ -31,7 +35,12 @@ header nav {
 }
 header nav a {
   text-decoration: none;
-  color: white;
+  color: #f4a234;
+}
+
+/*BODY      BODY        BODY        BODY        BODY        BODY        BODY        BODY        BODY*/
+body {
+  margin-top: 6vw;
 }
 
 /*FOOTER        FOOTER      FOOTER        FOOTER        FOOTER        FOOTER        FOOTER        FOOTER*/
@@ -44,6 +53,7 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   color: white;
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 footer section img {
   width: 3vw;

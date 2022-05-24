@@ -12,6 +12,7 @@ main {
     position: relative;
     text-align: center;
     overflow: hidden;
+
     h1 {
         z-index: 1;
         position: absolute;
@@ -21,6 +22,7 @@ main {
         // color: $whiteSpace;
         // backdrop-filter: grayscale(0.5);
     }
+
     img {
         width: 100%;
         // opacity: 75%;
@@ -37,6 +39,7 @@ main {
     grid-area: info;
     border-bottom: solid 0.2rem $secondaryColor;
     text-align: center;
+
     ul li {
         display: inline;
     }
@@ -48,6 +51,7 @@ main {
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 2rem;
+
     button {
         background-color: $ctaColor;
         float: right;
@@ -66,12 +70,14 @@ main {
     grid-area: description;
     margin: 1vw 2vw;
 }
+
 // list
 .list {
     margin: 2vw;
     border: solid 0.2rem $secondaryColor;
     border-radius: 0.5rem;
     padding: 0.5rem;
+
     th {
         text-align: left;
     }
@@ -86,11 +92,13 @@ main {
 .utensils {
     padding-top: 0.5rem;
 }
+
 // nutrition
 .nutrition {
     td:first-child {
         width: 70%;
     }
+
     td:last-child {
         width: 10%;
         text-align: right;
@@ -101,8 +109,10 @@ main {
 .steps {
     grid-area: steps;
     margin: 2rem;
+
     ol {
         margin-top: 1rem;
+
         li {
             margin-bottom: 1.5rem;
         }
@@ -113,35 +123,43 @@ main {
 .feedback {
     grid-area: feedback;
     margin: 0.5rem;
+
     .comment {
         display: grid;
         grid-template-columns: max-content;
         grid-template-areas: "img div";
         border: solid 0.2rem $secondaryColor;
+
         img {
             width: 5rem;
             height: 5rem;
             border-radius: 50%;
             margin: 0.5rem;
         }
+
         div {
             margin: 0.5rem;
         }
     }
+
     .commenting {
         border: solid 0.2rem $secondaryColor;
         padding-top: 0.5rem;
+
         label {
             padding: 0 0 0 1rem;
         }
+
         textarea {
             border: none;
             resize: none;
             width: 98%;
         }
+
         div {
             width: 100%;
             height: 2.2rem;
+
             input {
                 background-color: $ctaColor;
                 float: right;
@@ -153,7 +171,7 @@ main {
                 color: white;
                 margin-right: 1rem;
             }
-        } 
+        }
     }
 }
 
@@ -164,7 +182,7 @@ main {
     .leftSide {
         grid-area: leftSide;
     }
-    
+
     .rightSide {
         grid-area: rightSide;
     }
@@ -180,24 +198,25 @@ main {
         border: solid 0.2rem $secondaryColor;
         border-radius: 0.5rem;
         margin: 0 0.7rem;
+
         ul {
             padding: 0;
         }
     }
-    
+
     .textInformation {
         max-width: 500px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1.2fr 1fr;
-        grid-template-areas: 
-        // "hero hero"
-        "recipeButtons recipeButtons"
-        "leftSide description"
-        "leftSide info"
-        "leftSide rightSide"
-        "steps steps"
-        "feedback feedback";
+        grid-template-areas:
+            // "hero hero"
+            "recipeButtons recipeButtons"
+            "leftSide description"
+            "leftSide info"
+            "leftSide rightSide"
+            "steps steps"
+            "feedback feedback";
     }
 }
 
@@ -209,7 +228,7 @@ main {
     .leftSide {
         grid-area: leftSide;
     }
-    
+
     .rightSide {
         grid-area: rightSide;
     }
@@ -223,27 +242,24 @@ main {
         border: solid 0.2rem $secondaryColor;
         border-radius: 0.5rem;
         margin: 0 2vw;
+
         ul {
             padding: 0;
         }
     }
-    
+
     .textInformation {
         max-width: 850px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1.2fr 1fr;
-        grid-template-areas: 
-        // "hero hero"
-        "recipeButtons recipeButtons"
-        "leftSide description"
-        "leftSide info"
-        "leftSide rightSide"
-        "steps steps"
-        "feedback feedback";
+        grid-template-areas:
+            // "hero hero"
+            "recipeButtons recipeButtons"
+            "leftSide description"
+            "leftSide info"
+            "leftSide rightSide"
+            "steps steps"
+            "feedback feedback";
     }
 }
-
-
-
-

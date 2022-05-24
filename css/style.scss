@@ -50,12 +50,16 @@ header {
     display: flex;
     justify-content: space-between;
     font-family: $paragraphFont;
-    background-color: $primaryColor;
+    background-color: rgba($color: $primaryColor, $alpha: 0.98);
     color: $whiteSpace;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 
     div {
         height: 6vw;
         width: 6vw;
+
         img {
             width: auto;
             height: 100%;
@@ -70,7 +74,7 @@ header {
 
         a {
             text-decoration: none;
-            color: $whiteSpace;
+            color: $secondaryColor;
 
         }
 
@@ -78,6 +82,10 @@ header {
 
 }
 
+/*BODY      BODY        BODY        BODY        BODY        BODY        BODY        BODY        BODY*/
+body {
+    margin-top: 6vw;
+}
 
 /*FOOTER        FOOTER      FOOTER        FOOTER        FOOTER        FOOTER        FOOTER        FOOTER*/
 
@@ -90,7 +98,17 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     color: $whiteSpace;
     font-family: $paragraphFont ;
-    
+    position: relative;
+    overflow: hidden;
+
+    .footerLogo img {
+        width: 12vw;
+        height: auto;
+        position: absolute;
+        z-index: 1;
+        top: 0vw;
+    }
+
     section img {
         width: 3vw;
     }
@@ -99,13 +117,19 @@ footer {
         width: 100%;
         grid-column-start: 1;
         grid-column: span 2 / span 2;
-        margin-top: 2vw;
+        margin-top: 1vw;
         margin-left: 2vw;
 
 
         section {
             display: flex;
             justify-content: space-between;
+            margin-top: 6vw;
+
+            img {
+                z-index: 2;
+
+            }
         }
     }
 
@@ -150,3 +174,7 @@ footer {
         margin-top: 1vw;
     }
 }
+
+@media only screen and (min-width: map-get($breakPoints, lg)) {}
+
+@media only screen and (min-width: map-get($breakPoints, md)) {}
