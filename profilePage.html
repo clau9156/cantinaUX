@@ -20,60 +20,76 @@
       <a href="addRecipe.html">Add Recipe</a>
       <a href="recipeGenerator.html">Recipe Generator</a>
 
-      <img src="" alt="ProfileButton">
     </nav>
   </header>
   <main>
     <h1>Profile Page</h1>
-    <section>
+    <section class="profileWrapper">
       <article class="uploadWrapper">
-        <img src="" alt="">
-        <button class="upload">Upload</button>
+        <img src="images/svg/user-solid.svg" alt="profile Image">
+        <button class="upload">        <img src="images/svg/image-solid.svg" alt="upload image"> Upload
+        </button>
       </article>
       <article class="Details">
         <div>
+          <div class="editDetails">
           <h2>First Name</h2>
+            <img src="images/svg/pencil-solid.svg" alt="pencil">
+          </div>
           <p>Frederica Julia</p>
         </div>
         <div>
-          <h2>Last Name</h2>
+          <div class="editDetails">
+            <h2>Last Name</h2>
+            <img src="images/svg/pencil-solid.svg" alt="pencil">
+          </div>
+          
           <p>Böhm</p>
         </div>
         <div>
+          <div class="editDetails">
           <h2>Email</h2>
+          <img src="images/svg/pencil-solid.svg" alt="pencil">
+          </div>
           <p>jbohm7@gmail.com</p>
         </div>
         <div class="password">
+          <div class="editDetails">
           <h2>Password</h2>
-          <button>Renew Password</button>
+          <img src="images/svg/pencil-solid.svg" alt="pencil">
+
+          </div>
+
+          <p>*********</p>
+
         </div>
       </article>
       <article>
-        <div class="updateBtn">
+        <div class="btnContainer">
           <button class="cancel-btn">Cancel</button>
           <button class="update-btn">Update</button>
         </div>
         <div class="deleteWrapper">
-          <button class="delete-btn">Delete Account</button>
+        <button class="delete-btn">Delete Account</button>
 
         </div>
       </article>
     </section>
 
-    <section class="yourRecipes">
+      <article class="recipesHeadline">
       <h2>Your recipes</h2>
+      </article>
+    <section class="yourRecipes">
       <ul class="container">
         <li>
-          <img
-            src="images/image/stock-photo-fried-salmon-steak-with-potatoes-and-vegetables-on-wooden-table-1708527529.jpg"
-            alt="Recipe image">
+          <img src="images/image/raphael-nogueira-63mHpYEyjCA-unsplash.jpg" alt="Recipe image">
           <div class="recipeDetails">
-            <h3>Salmon with Potatoes</h3>
-            <ul>
+            <h3>Chicken Ceasar Salad</h3>
+            <ul class="descripDetails">
               <li>Time: 01:30</li>
               <li>Serves: 4</li>
-              <li>Rating: ☆★★★★</li>
-            </ul>
+              <li>☆★★★★</li>
+          </ul>
           </div>
           <div class="buttonContainer">
             <button>Update</button>
@@ -83,16 +99,15 @@
       </ul>
       <ul class="container">
         <li>
-          <img
-            src="images/image/stock-photo-fried-salmon-steak-with-potatoes-and-vegetables-on-wooden-table-1708527529.jpg"
-            alt="Recipe image">
+          <img src="images/image/raphael-nogueira-63mHpYEyjCA-unsplash.jpg" alt="Recipe image">
+
           <div class="recipeDetails">
-            <h3>Salmon with Potatoes</h3>
-            <ul>
+            <h3>Chicken Ceasar Salad</h3>
+            <ul class="descripDetails">
               <li>Time: 01:30</li>
               <li>Serves: 4</li>
-              <li>Rating: ☆★★★★</li>
-            </ul>
+              <li>☆★★★★</li>
+          </ul>
           </div>
           <div class="buttonContainer">
             <button>Update</button>
@@ -102,16 +117,15 @@
       </ul>
       <ul class="container">
         <li>
-          <img
-            src="images/image/stock-photo-fried-salmon-steak-with-potatoes-and-vegetables-on-wooden-table-1708527529.jpg"
-            alt="Recipe image">
+          <img src="images/image/raphael-nogueira-63mHpYEyjCA-unsplash.jpg" alt="Recipe image">
+
           <div class="recipeDetails">
-            <h3>Salmon with Potatoes</h3>
-            <ul>
+            <h3>Chicken Ceasar Salad</h3>
+            <ul class="descripDetails">
               <li>Time: 01:30</li>
               <li>Serves: 4</li>
-              <li>Rating: ☆★★★★</li>
-            </ul>
+              <li>☆★★★★</li>
+          </ul>
           </div>
           <div class="buttonContainer">
             <button>Update</button>
@@ -123,38 +137,38 @@
   </main>
   <footer>
     <div>
-      <a class="footerLogo" href="index.html"><img src="" alt="Logo"></a>
-      <section>
-        <img src="images/svg/facebook-square-brands.svg" alt="Facebook">
-        <img src="images/svg/twitter-square-brands.svg" alt="Twitter">
-        <img src="images/svg/instagram-square-brands.svg" alt="Instagram">
-        <img src="images/svg/linkedin-brands.svg" alt="Linkedin">
-      </section>
+        <a class="footerLogo" href="index.html"><img src="images/svg/logo2.svg" alt="Logo"></a>
+        <section>
+            <img src="images/svg/facebook-square-brands.svg" alt="Facebook">
+            <img src="images/svg/twitter-square-brands.svg" alt="Twitter">
+            <img src="images/svg/instagram-square-brands.svg" alt="Instagram">
+            <img src="images/svg/linkedin-brands.svg" alt="Linkedin">
+        </section>
     </div>
 
     <p class="copyRight">&copy;Group D</p>
     <section>
-      <h2>Pages</h2>
-      <ul>
-        <li><a href="recipe.html">Recipe </a></li>
-        <li><a href="addRecipe.html">Add recipe </a></li>
-        <li><a href="recipeGenerator.html">Recipe Generator </a></li>
-        <li><a href="profilePage.html">Profile page</a></li>
-      </ul>
+        <h2>Pages</h2>
+        <ul>
+            <li><a href="recipe.html">Recipe </a></li>
+            <li><a href="addRecipe.html">Add recipe </a></li>
+            <li><a href="recipeGenerator.html">Recipe Generator </a></li>
+            <li><a href="profilePage.html">Profile page</a></li>
+        </ul>
     </section>
     <section>
-      <h2>Company Info</h2>
-      <p>Bla bla bla</p>
+        <h2>Company Info</h2>
+        <p>Bla bla bla</p>
     </section>
     <section>
-      <h2>Contact</h2>
-      <ul>
-        <li>cantina.info@cantina.com</li>
-        <li>+45 55551234</li>
-        <li>Tatawine</li>
-      </ul>
+        <h2>Contact</h2>
+        <ul>
+            <li>cantina.info@cantina.com</li>
+            <li>+45 55551234</li>
+            <li>Tatawine</li>
+        </ul>
     </section>
-  </footer>
+</footer>
 </body>
 
 </html>

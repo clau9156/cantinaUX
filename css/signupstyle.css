@@ -10,90 +10,277 @@
 header {
   width: 100%;
   height: 6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Roboto", sans-serif;
-  background-color: #1f5473;
+  background-color: rgba(31, 84, 115, 0.98);
   color: white;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
+
 header div {
-  height: 5vw;
-  width: 5vw;
-  padding: 0.75vw;
+  height: 6vw;
+  width: 6vw;
 }
+
+header div img {
+  width: auto;
+  height: 100%;
+}
+
 header nav {
   width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 header nav a {
   text-decoration: none;
-  color: white;
+  color: #f4a234;
+}
+
+/*BODY      BODY        BODY        BODY        BODY        BODY        BODY        BODY        BODY*/
+body {
+  margin-top: 6vw;
 }
 
 /*FOOTER        FOOTER      FOOTER        FOOTER        FOOTER        FOOTER        FOOTER        FOOTER*/
 footer {
   background-color: #1f5473;
   width: 100%;
-  height: 13.5vw;
+  height: 70vh;
   bottom: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   color: white;
   font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow: hidden;
 }
+
+footer .footerLogo img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: -9vw;
+}
+
 footer section img {
-  width: 3vw;
+  width: 10vw;
 }
+
 footer div {
   width: 100%;
-  grid-column-start: 1;
-  grid-column: span 2/span 2;
-  margin-top: 2vw;
-  margin-left: 2vw;
 }
+
 footer div section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 45vw;
 }
+
+footer div section img {
+  z-index: 2;
+}
+
 footer .copyRight {
   position: absolute;
   bottom: 1vw;
-  left: 47.5vw;
+  left: 40.5vw;
 }
+
 footer > section {
-  grid-column-start: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
+
 footer > section a {
   text-decoration: none;
   color: white;
 }
+
 footer :nth-child(4) {
-  grid-column-start: 7;
+  -ms-grid-column: 7;
+      grid-column-start: 7;
 }
+
 footer :last-child {
-  grid-column-start: 8;
+  -ms-grid-column: 8;
+      grid-column-start: 8;
 }
+
 footer li {
   list-style-type: none;
-  padding-bottom: 0.25vw;
+  padding-bottom: 2vw;
 }
+
 footer h2 {
   font-family: "Oswald", sans-serif;
   padding-bottom: 0.5vw;
 }
+
 footer section {
-  margin-top: 1vw;
+  margin-top: 5vw;
 }
 
-body {
+@media only screen and (min-width: 480px) {
+  footer {
+    height: 35vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  footer .footerLogo img {
+    width: 25vw;
+    top: 0vw;
+  }
+  footer section img {
+    width: 5vw;
+  }
+  footer div {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    margin-top: 1vw;
+    margin-left: 2vw;
+  }
+  footer div section {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 15vw;
+  }
+  footer div section :nth-child(4) {
+    display: block;
+  }
+  footer .copyRight {
+    left: 47.5vw;
+  }
+  footer > section {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    text-align: right;
+  }
+  footer > section :nth-child(4) {
+    display: block;
+  }
+  footer :nth-child(4) {
+    display: none;
+  }
+  footer :last-child {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+  }
+  footer li {
+    padding-bottom: 2.5vw;
+  }
+  footer h2 {
+    padding-bottom: 0.5vw;
+  }
+  footer section {
+    margin-top: 1vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    height: 13.5vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  footer .footerLogo img {
+    width: 13.5vw;
+    top: 0vw;
+  }
+  footer section img {
+    width: 2.5vw;
+  }
+  footer div {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    margin-top: 1vw;
+    margin-left: 2vw;
+  }
+  footer div section {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 6vw;
+    width: 20vw;
+  }
+  footer .copyRight {
+    left: 47.5vw;
+  }
+  footer > section {
+    -ms-grid-column: 5;
+        grid-column-start: 5;
+    text-align: right;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  footer > :nth-child(4) {
+    display: block;
+    text-align: right;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 2;
+    grid-column: 6/ span 2;
+    width: 80%;
+    margin-right: 5vw;
+  }
+  footer > :last-child {
+    -ms-grid-column: 8;
+        grid-column-start: 8;
+  }
+  footer li {
+    padding-bottom: 0.5vw;
+    width: 100%;
+  }
+  footer li a {
+    width: 100%;
+  }
+  footer h2 {
+    padding-bottom: 0.5vw;
+    width: 100%;
+  }
+  footer section {
+    margin-top: 1vw;
+    margin-right: 1vw;
+  }
+}
+
+main {
   max-width: 1100px;
   margin: 0 auto;
 }
 
 h1 {
-  margin-top: 3rem;
+  margin-top: 10rem;
   margin-bottom: 2rem;
   text-align: center;
   font-size: 2rem;
@@ -101,14 +288,29 @@ h1 {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: "Oswald", sans-serif;
 }
 
@@ -122,7 +324,7 @@ form input {
   height: 2rem;
   margin: 1rem 0;
   border: 1px solid #1f5473;
-  border-radius: 0.5vw;
+  border-radius: .5vw;
 }
 
 .clearfix {
@@ -133,7 +335,7 @@ form input {
   width: 6rem;
   height: 2rem;
   margin-left: 1rem;
-  background-color: #1f5473;
+  background-color: #6e1916;
   color: white;
   text-decoration: none;
   border: none;
@@ -145,20 +347,27 @@ form input {
 
 .clearfix .cancelbtn {
   background-color: white;
-  color: #1f5473;
-  border: solid 2px #1f5473;
+  color: #6e1916;
+  border: solid 2px #6e1916;
   text-decoration: none;
   border-radius: 1vw;
   padding: 0.5vw 1vw;
   font-size: 3.4vw;
   cursor: pointer;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .uploader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .custom-file-input::-webkit-file-upload-button {
@@ -169,7 +378,7 @@ form input {
 .custom-file-input::before {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  content: "Upload";
+  content: 'Upload';
   display: inline-block;
   border: 1px solid #999;
   border-radius: 3px;
@@ -192,37 +401,35 @@ form input {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
-input[type=file] {
+input[type='file'] {
   color: transparent;
 }
 
 @media only screen and (min-width: 768px) {
   main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-
   header h1 {
     margin-top: 10rem;
     margin-bottom: 3rem;
     text-align: center;
   }
-
   .clearfix .cancelbtn {
     font-size: 1.4vw;
   }
-
   .clearfix .signupbtn {
     font-size: 1.4vw;
   }
-
   .custom-file-input::before {
     margin-top: 15rem;
   }
-
   form {
     padding-bottom: 4rem;
   }
 }
-
-/*# sourceMappingURL=signupstyle.css.map */
