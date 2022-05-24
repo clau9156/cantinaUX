@@ -12,7 +12,7 @@
 <body>
   <header>
         <div>
-            <a href="index.html"><img src="" alt="logo"></a>
+            <a href="index.html"><img src="images/svg/logo2.svg" alt="logo"></a>
         </div>
         <nav>
 
@@ -24,7 +24,50 @@
         </nav>
     </header>
   <main>
-    <h1></h1>
+    <h1>Add Recipe</h1>
+    <form>
+      <fieldset>
+        <label for="fileUpload">
+          <img class="upload" src="images/svg/image-solid.svg" alt="upload">
+        </label>
+        <input id="fileUpload" name="fileUpload" type="file"><br>
+        <label for="">Upload Recipe Image or Video</label>
+      </fieldset>
+      <fieldset>
+        <input id="title" name="title" type="text" placeholder="Recipe title"><br>
+        <textarea id="description" name="description" type="text" placeholder="Recipe description goes here..."></textarea><br>
+        <label for="serves">Serves</label>
+        <input id="serves" name="serves" type="text" placeholder="0"><br>
+        <label for="time">Cook time</label>
+        <input id="time" name="time" type="text" placeholder="0 min">
+      </fieldset>
+      <fieldset>
+        <label for="ingredients">Ingredients</label><br>
+        <output class="ingredient" name="ingredient" for="add">
+          <span>
+            <img class="bars" src="images/svg/bars-solid.svg" alt="bars">
+          </span>
+          <input id="ingredient" type="text" placeholder="Ingredient">
+          <span>
+            <img class="cross" src="images/svg/xmark-solid.svg" alt="cross">
+          </span>
+        </output><br>
+        <input id="add" name="add" type="button" value="+ Add Ingredient">
+      </fieldset>
+      <fieldset>
+        <label for="utensils">Utensils</label><br>
+      </fieldset>
+
+      <fieldset>
+        <label for="steps">Steps</label><br>
+      </fieldset>
+      <fieldset>
+        <label for="tags">Add tags</label><br>
+        <input id="tags" name="tags" type="text" placeholder="Write tag here"><br>
+      </fieldset>
+      <input type="submit" value="PUBLISH">
+    </form>
+    <!-- <h1></h1>
     <article>
       <label for=""></label>
       <input type="file">
@@ -149,7 +192,7 @@
         <div>Low carb</div>
       </article>
     </section>
-    <button>Publish</button>
+    <button>Publish</button> -->
   </main>
   <aside>
     <section>
@@ -163,7 +206,7 @@
   </aside>
   <footer>
     <div>
-        <a class="footerLogo" href="index.html"><img src="" alt="Logo"></a>
+        <a class="footerLogo" href="index.html"><img src="images/svg/logo2.svg" alt="Logo"></a>
         <section>
             <img src="images/svg/facebook-square-brands.svg" alt="Facebook">
             <img src="images/svg/twitter-square-brands.svg" alt="Twitter">
