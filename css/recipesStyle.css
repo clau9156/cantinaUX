@@ -434,7 +434,6 @@ footer section {
 }
 main {
   margin-top: 4rem;
-  height: 100vh;
   font-family: "Roboto", sans-serif;
 }
 
@@ -471,6 +470,8 @@ section.searchWrapper input {
   margin-top: 3rem;
   width: 80%;
   height: 3rem;
+  border-radius: 1vw;
+  border: solid 1px black;
 }
 section.searchWrapper input::placeholder {
   padding-left: 1rem;
@@ -491,9 +492,83 @@ section.buttonWrapper {
   align-items: center;
   margin: 2rem 2rem;
 }
-section.buttonWrapper select {
+section.buttonWrapper section select {
   background: transparent;
-  width: 1vw;
+  width: 5vw;
+  border: none;
+}
+
+section.yourRecipes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+section.yourRecipes h2 {
+  font-size: 6vw;
+  margin-top: 2rem;
+  text-align: center;
+}
+section.yourRecipes img {
+  text-align: center;
+  width: 100%;
+}
+section.yourRecipes ul.container {
+  margin-top: 2rem;
+  list-style-type: none;
+  border: 1px solid #6e1916;
+  border-radius: 1vw;
+  overflow: hidden;
+}
+section.yourRecipes h3 {
+  margin: 1rem 0rem;
+}
+
+div.recipeDetails {
+  text-align: left;
+  padding-left: 2rem;
+}
+div.recipeDetails div.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+ul.descripDetails {
+  list-style-type: none;
+}
+ul.descripDetails li:nth-child(3) {
+  color: #f4a234;
+}
+
+ul.container div.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+ul.container div.buttonContainer button {
+  margin-top: 1rem;
+  width: 50%;
+  background-color: white;
+  border: 1px solid #6e1916;
+  border-style: solid none none none;
+  color: #6e1916;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  font-size: 3.4vw;
+}
+ul.container div.buttonContainer button:nth-child(1) {
+  border-style: solid solid none none;
+}
+
+section.advert1 {
+  width: 10rem;
+  height: 5rem;
+  background-color: red;
 }
 
 /*# sourceMappingURL=recipesStyle.css.map */
