@@ -468,6 +468,7 @@ section.searchWrapper {
 }
 section.searchWrapper input {
   margin-top: 3rem;
+  padding-left: 1rem;
   width: 80%;
   height: 3rem;
   border-radius: 1vw;
@@ -498,6 +499,23 @@ section.buttonWrapper section select {
   border: none;
 }
 
+section.recipeWrapper {
+  display: flex;
+  flex-direction: column;
+}
+section.recipeWrapper section.yourRecipe:nth-child(1) {
+  order: 2;
+}
+section.recipeWrapper section.yourRecipe:nth-child(2) {
+  order: 3;
+}
+section.recipeWrapper section.yourRecipe:nth-child(3) {
+  order: 1;
+}
+section.recipeWrapper section.yourRecipe:nth-child(4) {
+  order: 4;
+}
+
 section.yourRecipes {
   display: flex;
   flex-direction: column;
@@ -507,7 +525,6 @@ section.yourRecipes {
   padding: 0 2rem;
 }
 section.yourRecipes h2 {
-  font-size: 6vw;
   margin-top: 2rem;
   text-align: center;
 }
@@ -516,7 +533,7 @@ section.yourRecipes img {
   width: 100%;
 }
 section.yourRecipes ul.container {
-  margin-top: 2rem;
+  margin-top: 1rem;
   list-style-type: none;
   border: 1px solid #6e1916;
   border-radius: 1vw;
@@ -566,9 +583,107 @@ ul.container div.buttonContainer button:nth-child(1) {
 }
 
 section.advert1 {
-  width: 10rem;
-  height: 5rem;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 80%;
+  height: 8rem;
+  background-color: gray;
+  opacity: 0.5;
+}
+section.advert1 h2 {
+  font-size: 6vw;
+}
+
+@media only screen and (min-width: 480px) {
+  h1 {
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 3.4vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+
+  p, input, li, label {
+    font-size: 2.4vw;
+  }
+
+  section.searchWrapper img {
+    top: 8vw;
+    right: 16vw;
+  }
+
+  section.yourRecipes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section.yourRecipes ul.container {
+    margin: 1rem;
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 1032px) {
+  h1 {
+    font-size: 3.6vw;
+  }
+
+  h2, th {
+    font-size: 3vw;
+  }
+
+  h3 {
+    font-size: 2.5vw;
+  }
+
+  p, input, li, label {
+    font-size: 1.8vw;
+  }
+
+  section.searchWrapper img {
+    top: 5vw;
+    right: 12vw;
+  }
+
+  section.recipeWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  section.recipeWrapper section.yourRecipes:nth-child(1) {
+    order: 4;
+  }
+  section.recipeWrapper section.yourRecipes:nth-child(2) {
+    order: 1;
+  }
+  section.recipeWrapper section.yourRecipes:nth-child(3) {
+    order: 2;
+  }
+  section.recipeWrapper section.yourRecipes:nth-child(4) {
+    order: 3;
+  }
+
+  section.yourRecipes {
+    display: flex;
+    flex-direction: row;
+  }
+  section.yourRecipes ul.container {
+    margin: 1rem;
+    width: 30%;
+  }
+  section.yourRecipes ul.container h3 {
+    font-size: 2.5vw;
+  }
+  section.yourRecipes ul.container div.buttonContainer button {
+    font-size: 1.8vw;
+  }
 }
 
 /*# sourceMappingURL=recipesStyle.css.map */
