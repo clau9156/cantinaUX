@@ -11,24 +11,48 @@
 
 <body>
   <header>
-        <div>
-            <a href="index.html"><img src="images/svg/logo2.svg" alt="logo"></a>
+    <div>
+      <a href="index.html"><img src="images/svg/logo2.svg" alt="logo"></a>
+    </div>
+    <nav>
+
+      <a href="recipe.html">Recipes</a>
+      <a href="addRecipe.html">Add Recipe</a>
+      <a href="recipeGenerator.html">Recipe Generator</a>
+
+      <div>
+        <input type="checkbox">
+        <div id="userMenu">
+          <a href="profilePage.html">Your profile</a>
+          <a href="">Settings</a>
+          <a href="">Logout</a>
         </div>
-        <nav>
+      </div>
+      <img src="images/svg/user-solid.svg" alt="ProfileButton">
 
-            <a href="recipe.html">Recipes</a>
-            <a href="addRecipe.html">Add Recipe</a>
-            <a href="recipeGenerator.html">Recipe Generator</a>
+    </nav>
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <div id="menuB">
+        <a href="recipe.html">Recipes</a>
+        <a href="addRecipe.html">Add Recipe</a>
+        <a href="recipeGenerator.html">Recipe Generator</a>
+        <a href="profilePage.html">Your profile</a>
+        <a href="">Settings</a>
+        <a href="">Logout</a>
+      </div>
+    </div>
 
-            <img src="" alt="ProfileButton">
-        </nav>
-    </header>
+  </header>
   <main>
     <h1>Add Recipe</h1>
     <form>
       <fieldset>
         <label for="fileUpload">
-          <img class="upload" src="images/svg/image-solid.svg" alt="upload">
+          <img src="images/svg/image-solid.svg" alt="upload">
         </label>
         <input id="fileUpload" name="fileUpload" type="file"><br>
         <label for="">Upload Recipe Image or Video</label>
@@ -43,7 +67,17 @@
       </fieldset>
       <fieldset>
         <label for="ingredients">Ingredients</label><br>
-        <output class="ingredient" name="ingredient" for="add">
+        <div class="ingredient">
+          <label for="">
+            <img class="bars" src="images/svg/bars-solid.svg" alt="bars">
+          </label>
+          <input type="text" name="ingredient" id="ingredient" placeholder="ingredient here">
+          <!-- <input type="button" id="close" name="close" -->
+          <label for="">
+            <img class="cross" src="images/svg/xmark-solid.svg" alt="cross">
+          </label>
+        </div>
+        <!-- <output class="ingredient" name="ingredient" for="add">
           <span>
             <img class="bars" src="images/svg/bars-solid.svg" alt="bars">
           </span>
@@ -51,19 +85,59 @@
           <span>
             <img class="cross" src="images/svg/xmark-solid.svg" alt="cross">
           </span>
-        </output><br>
+        </output><br> -->
         <input id="add" name="add" type="button" value="+ Add Ingredient">
       </fieldset>
       <fieldset>
         <label for="utensils">Utensils</label><br>
+        <div class="utensil">
+          <label for="">
+            <img class="bars" src="images/svg/bars-solid.svg" alt="bars">
+          </label>
+          <input type="text" name="ingredient" id="ingredient" placeholder="ingredient here">
+          <!-- <input type="button" id="close" name="close" -->
+          <label for="">
+            <img class="cross" src="images/svg/xmark-solid.svg" alt="cross">
+          </label>
+        </div>
+        <input id="add" name="add" type="button" value="+ Add Ingredient">
       </fieldset>
 
       <fieldset>
         <label for="steps">Steps</label><br>
+        <select>
+          <option name="1" value="1">1</option>
+          <option name="2" value="2">2</option>
+          <option name="3" value="3">3</option>
+          <option name="4" value="4">4</option>
+          <option name="5" value="5">5</option>
+          <option name="6" value="6">6</option>
+          <option name="7" value="7">7</option>
+          <option name="8" value="8">8</option>
+          <option name="9" value="9">9</option>
+          <option name="10" value="10">10</option>
+        </select>
+        <span></span>
+        <div class="step">
+          <output for="">1</output>
+          <label for="">
+            <img class="bars" src="images/svg/bars-solid.svg" alt="bars">
+          </label>
+          <input type="text" name="ingredient" id="ingredient" placeholder="ingredient here">
+          <!-- <input type="button" id="close" name="close" -->
+          <label for="">
+            <img class="cross" src="images/svg/xmark-solid.svg" alt="cross">
+          </label>
+        </div>
+        <label for="fileUpload">
+          <img src="images/svg/image-solid.svg" alt="upload">
+        </label>
+        <input id="fileUpload" name="fileUpload" type="file"><br>
       </fieldset>
       <fieldset>
         <label for="tags">Add tags</label><br>
-        <input id="tags" name="tags" type="text" placeholder="Write tag here"><br>
+        <input id="tag" name="tag" type="text" placeholder="Write tag here"><br>
+        <output for="tag" name="tag"></output>
       </fieldset>
       <input type="submit" value="PUBLISH">
     </form>
