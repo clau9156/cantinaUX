@@ -3,6 +3,7 @@
 // MAIN
 main {
     font-family: $paragraphFont;
+    text-align: justify;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h2, th {
 h3 {
     font-size: $iphoneH3;
 }
-p, input, li, td {
+p, input, li, td, input[type="submit"], button {
     font-size: $iphoneP;
 }
 label {
@@ -42,7 +43,6 @@ label {
 
     img {
         width: 100%;
-        // opacity: 75%;
         filter: blur(4px);
         position: absolute;
         top: -5vw;
@@ -54,7 +54,7 @@ label {
 // info
 .info {
     grid-area: info;
-    border-bottom: solid 0.2rem $secondaryColor;
+    box-shadow: 0 8px 8px -4px $textColor;
     text-align: center;
 
     ul li {
@@ -75,7 +75,6 @@ label {
         padding: 0.5vw 2vw;
         border: $ctaColor solid 0.1vw;
         border-radius: 0.5vw;
-        // font-size: 1.8vw;
         cursor: pointer;
         color: $whiteSpace;
         margin-right: 1rem;
@@ -85,16 +84,16 @@ label {
 // description
 .description {
     grid-area: description;
-    margin: 1vw 2vw;
+    margin: 1vw 3.5vw;
 }
 
 // list
 .list {
+    text-align:start;
     margin: 2vw;
-    border: solid 0.2rem $secondaryColor;
     border-radius: 0.5rem;
     padding: 0.5rem;
-
+    box-shadow: 4px 4px 10px rgba($color: $textColor, $alpha: 0.5);
     th {
         text-align: left;
     }
@@ -113,16 +112,17 @@ label {
 // nutrition
 .nutrition {
     td:first-child {
-        width: 70%;
+        width: 60%;
     }
 
     td:nth-child(2) {
         width: 20%;
-        
+        text-align: right;
+        padding-right: 1rem;
     }
 
     td:last-child {
-        width: 10%;
+        width: 20%;
         text-align: right;
     }
 }
@@ -145,56 +145,66 @@ label {
 .feedback {
     grid-area: feedback;
     margin: 0.5rem;
-
-    .comment {
-        display: grid;
-        grid-template-columns: max-content;
-        grid-template-areas: "img div";
-        border: solid 0.2rem $secondaryColor;
-
-        img {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 50%;
-            margin: 0.5rem;
-        }
-
-        div {
-            margin: 0.5rem;
-        }
+    div h3 {
+        margin-left: 0.5rem;
     }
-
-    .commenting {
+    section h2 {
+        margin-left: 0.5rem;
+    }
+    .comments {
         border: solid 0.2rem $secondaryColor;
-        padding-top: 0.5rem;
-
-        label {
-            padding: 0 0 0 1rem;
+        border-radius: 0.5rem;
+        .comment {
+            display: grid;
+            grid-template-columns: max-content;
+            grid-template-areas: "img div";
+            border-bottom: solid 0.2rem $secondaryColor;
+    
+            img {
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                margin: 0.5rem;
+            }
+    
+            div {
+                margin: 0.5rem;
+                h3 {
+                    margin: 0;
+                }
+            }
         }
-
-        textarea {
-            border: none;
-            resize: none;
-            width: 98%;
-        }
-
-        div {
-            width: 100%;
-            height: 2.2rem;
-
-            input {
-                background-color: $ctaColor;
-                float: right;
-                padding: 0.5vw 1vw;
-                border: $ctaColor solid 0.1vw;
-                border-radius: 1vw;
-                // font-size: 1.8vw;
-                cursor: pointer;
-                color: white;
-                margin-right: 1rem;
+    
+        .commenting {
+            padding-top: 0.5rem;
+            label {
+                padding: 0 0 0 1rem;
+            }
+    
+            textarea {
+                border: none;
+                resize: none;
+                width: 98%;
+            }
+    
+            div {
+                width: 100%;
+                height: 2.2rem;
+    
+                input[type="submit"] {
+                    background-color: $ctaColor;
+                    float: right;
+                    padding: 0.5vw 2vw;
+                    border: $ctaColor solid 0.1vw;
+                    border-radius: 0.5vw;
+                    cursor: pointer;
+                    color: $whiteSpace;
+                    margin-right: 1rem;
+                }
             }
         }
     }
+    
 }
 
 @media only screen and (min-width: map-get($breakPoints, md)) {
@@ -214,7 +224,7 @@ label {
     }
 
     .info {
-        border: solid 0.2rem $secondaryColor;
+        box-shadow: 4px 4px 10px rgba($color: $textColor, $alpha: 0.5);
         border-radius: 0.5rem;
         margin: 0 0.7rem;
 
@@ -229,13 +239,16 @@ label {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
         grid-template-areas:
-            // "hero hero"
             "recipeButtons recipeButtons"
             "leftSide description"
             "leftSide info"
             "leftSide rightSide"
             "steps steps"
             "feedback feedback";
+    }
+
+    .commenting {
+        height: 22vw;
     }
 
     h1 {
@@ -245,12 +258,9 @@ label {
         font-size: $ipadH2;
     }
     h3 {
-        font-size: $iphoneH3;
+        font-size: $ipadH3;
     }
-    p, input, li, td {
-        font-size: $ipadP;
-    }
-    label {
+    p, input, li, td, input[type="submit"], button, label {
         font-size: $ipadP;
     }
 }
@@ -274,7 +284,7 @@ label {
     }
 
     .info {
-        border: solid 0.2rem $secondaryColor;
+        box-shadow: 4px 4px 10px rgba($color: $textColor, $alpha: 0.5);
         border-radius: 0.5rem;
         margin: 0 2vw;
 
@@ -289,13 +299,16 @@ label {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
         grid-template-areas:
-            // "hero hero"
             "recipeButtons recipeButtons"
             "leftSide description"
             "leftSide info"
             "leftSide rightSide"
             "steps steps"
             "feedback feedback";
+    }
+
+    .commenting {
+        height: 16vw;
     }
 
     h1 {
@@ -307,10 +320,7 @@ label {
     h3 {
         font-size: $pcH3;
     }
-    p, input, li, td {
-        font-size: $pcP;
-    }
-    label {
+    p, input, li, td, input[type="submit"], button, label {
         font-size: $pcP;
     }
 }
@@ -318,6 +328,7 @@ label {
 @media only screen and (min-width: map-get($breakPoints, xl)) {
     .hero {
         height: 20vw;
+
     }
 
     .leftSide {
@@ -334,7 +345,7 @@ label {
     }
 
     .info {
-        border: solid 0.2rem $secondaryColor;
+        box-shadow: 4px 4px 10px rgba($color: $textColor, $alpha: 0.5);
         border-radius: 0.5rem;
         margin: 0 2vw;
 
@@ -349,13 +360,16 @@ label {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
         grid-template-areas:
-            // "hero hero"
             "recipeButtons recipeButtons"
             "leftSide description"
             "leftSide info"
             "leftSide rightSide"
             "steps steps"
             "feedback feedback";
+    }
+
+    .commenting {
+        height: 14vw;
     }
 
     h1 {
@@ -367,10 +381,7 @@ label {
     h3 {
         font-size: $pcH3;
     }
-    p, input, li, td {
-        font-size: $pcP;
-    }
-    label {
+    p, input, li, td, input[type="submit"], button, label {
         font-size: $pcP;
     }
 }
