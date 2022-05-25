@@ -44,12 +44,23 @@
         </div>
     </header>
     <main>
+        
+        <!--Search bar-->
         <section class="searchWrapper">
         <input type="search" class="searchInput" name="search" placeholder="search"></input>
         <img src="images/svg/magnifying-glass-solid.svg">
         </section>
+
+        <!--Filter Order-->
         <section class="buttonWrapper">
-            <button class="filterBtn">Filter</button>
+            <section class="filterWrapper">
+                <div>
+                    <input type="checkbox" name="name1">
+                    <label for="">Filter</label>
+                    <div></div>
+                </div>
+                </section>
+                
             <section>
                 <select id="dropDownExample" value="">
                   <option></option>
@@ -58,11 +69,59 @@
                   <option value="option3">option3</option>
                   <option value="option4">option4</option>
                 </select>
-                <label for="dropDownExample">Order by</label>
+                <label for="dropDownExample">Order</label>
       
             </section>
         </section>
+
+        <!--Recipe-->
+
+        <section class="yourRecipes">
+            <ul class="container">
+              <li>
+                <img src="images/image/raphael-nogueira-63mHpYEyjCA-unsplash.jpg" alt="Recipe image">
+                <div class="recipeDetails">
+                  <h3>Chicken Ceasar Salad</h3>
+                  <ul class="descripDetails">
+                    <li>Time: 01:30</li>
+                    <li>Serves: 4</li>
+                    <li>☆★★★★</li>
+                </ul>
+                </div>
+                <div class="buttonContainer">
+                  <button>Update</button>
+                  <button>Delete</button>
+                </div>
+              </li>
+            </ul>
+            <ul class="container">
+              <li>
+                <img src="images/image/raphael-nogueira-63mHpYEyjCA-unsplash.jpg" alt="Recipe image">
+      
+                <div class="recipeDetails">
+                  <h3>Chicken Ceasar Salad</h3>
+                  <ul class="descripDetails">
+                    <li>Time: 01:30</li>
+                    <li>Serves: 4</li>
+                    <li>☆★★★★</li>
+                </ul>
+                </div>
+                <div class="buttonContainer">
+                  <button>Update</button>
+                  <button>Delete</button>
+                </div>
+              </li>
+            </ul>
+
+     </section>
+    <!--Horizontal Ad-->
+
+    <section class="advert1">
+    </section>
+
     </main>
+
+    <!--Footer-->
     <footer>
         <div>
             <a class="footerLogo" href="index.html"><img src="images/svg/logo2.svg" alt="Logo"></a>

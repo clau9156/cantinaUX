@@ -3,7 +3,6 @@
 // MAIN
 main {
     margin-top:4rem;
-    height:100vh;
     font-family: $paragraphFont;
 }
 
@@ -36,6 +35,8 @@ section.searchWrapper {
         margin-top:3rem;
         width:80%;
         height:3rem;
+        border-radius:1vw;
+        border:solid 1px $textColor;
         
     }
 
@@ -58,8 +59,88 @@ section.buttonWrapper{
     justify-content: space-between;
     align-items:center;
     margin:2rem 2rem;
-    select {
+    section select {
         background:transparent;
-        width:1vw;
+        width:5vw;
+        border:none;
     }
+}
+
+// Recipes
+
+section.yourRecipes{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:2rem;
+    padding:0 2rem;
+
+    h2 {
+        font-size:$iphoneH2;
+        margin-top:2rem;
+        text-align: center;
+    }
+    
+    img {
+        text-align: center;
+        width:100%;
+    }
+    ul.container {
+        margin-top:2rem;
+        list-style-type:none;
+        border: 1px solid $ctaColor;
+        border-radius:1vw;
+        overflow: hidden;
+    }
+    h3{
+        margin:1rem 0rem;
+    }
+}
+
+div.recipeDetails{
+    text-align:left;
+    padding-left:2rem;
+    div.buttonContainer{
+        display:flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        margin-top:2rem;
+    }
+}
+
+ul.descripDetails {
+    list-style-type:none;
+    li:nth-child(3){
+        color:$secondaryColor;
+    }
+}
+
+ul.container div.buttonContainer {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+
+button {
+        margin-top:1rem;
+        width:50%;
+        background-color:$whiteSpace;
+        border: 1px solid $ctaColor;
+        border-style:solid none none none;
+        color:$ctaColor;
+        cursor:pointer;
+        padding:1rem 1rem;
+        font-size: 3.4vw;
+        }
+        button:nth-child(1) {
+            border-style:solid solid none none;
+        }
+        
+}
+
+section.advert1{
+    width:10rem;
+    height:5rem;
+    background-color: red;
 }
