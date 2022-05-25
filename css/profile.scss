@@ -142,6 +142,8 @@ section.yourRecipes{
         margin-top:2rem;
         list-style-type:none;
         border: 1px solid $ctaColor;
+        border-radius:1vw;
+        overflow: hidden;
     }
     h3{
         margin:1rem 0rem;
