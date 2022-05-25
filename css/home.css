@@ -272,7 +272,7 @@ header #menuB a {
 
 /*BODY      BODY        BODY        BODY        BODY        BODY        BODY        BODY        BODY*/
 body {
-  margin-top: 6vw;
+  margin-top: 20vw;
 }
 
 /*FOOTER        FOOTER      FOOTER        FOOTER        FOOTER        FOOTER        FOOTER        FOOTER*/
@@ -368,6 +368,9 @@ footer section {
 }
 
 @media only screen and (min-width: 480px) {
+  body {
+    margin-top: 6vw;
+  }
   footer {
     height: 35vw;
     display: -ms-grid;
@@ -430,6 +433,9 @@ footer section {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    margin-top: 6vw;
+  }
   footer {
     height: 13.5vw;
     display: -ms-grid;
@@ -501,6 +507,9 @@ footer section {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    margin-top: 6vw;
+  }
   footer {
     font-size: 1vw;
   }

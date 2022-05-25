@@ -303,7 +303,10 @@ footer section {
   body {
     margin-top: 6vw;
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 81a4a39b6e7ed7edda0959efbc73bc732c734862
   footer {
     height: 35vw;
     display: grid;
@@ -361,7 +364,10 @@ footer section {
   body {
     margin-top: 6vw;
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 81a4a39b6e7ed7edda0959efbc73bc732c734862
   footer {
     height: 13.5vw;
     display: grid;
@@ -425,6 +431,13 @@ footer section {
     margin-top: 6vw;
   }
 
+<<<<<<< HEAD
+@media only screen and (min-width: 768px) {
+  body {
+    margin-top: 6vw;
+  }
+=======
+>>>>>>> 81a4a39b6e7ed7edda0959efbc73bc732c734862
   footer {
     font-size: 1vw;
   }
