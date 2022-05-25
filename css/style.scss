@@ -26,7 +26,7 @@ $ipadP: 2.4vw;
 // PC
 $pcH1: 3.6vw;
 $pcH2: 3vw;
-$pcH3: 2.5vw; 
+$pcH3: 2.5vw;
 $pcP: 1.8vw;
 
 
@@ -414,6 +414,7 @@ footer {
     body {
         margin-top: 6vw;
     }
+
     footer {
         height: 35vw;
         display: grid;
@@ -489,6 +490,7 @@ footer {
     body {
         margin-top: 6vw;
     }
+
     footer {
         height: 13.5vw;
         display: grid;
@@ -566,10 +568,11 @@ footer {
     }
 }
 
-@media only screen and (min-width: map-get($breakPoints, lg)) {
+@media only screen and (min-width: map-get($breakPoints, xl)) {
     body {
         margin-top: 6vw;
     }
+
     footer {
         font-size: 1vw;
 
