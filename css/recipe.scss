@@ -4,24 +4,25 @@
 main {
     font-family: $paragraphFont;
     text-align: justify;
+    h1 {
+        font-size: $phoneH1;
+    }
+    h2, th {
+        font-size: $iphoneH2;
+    }
+    h3 {
+        font-size: $iphoneH3;
+    }
+    p, input, li, td, input[type="submit"], button {
+        font-size: $iphoneP;
+    }
+    label {
+        font-size: $iphoneP;
+        font-weight:900;
+    }
+
 }
 
-h1 {
-    font-size: $phoneH1;
-}
-h2, th {
-    font-size: $iphoneH2;
-}
-h3 {
-    font-size: $iphoneH3;
-}
-p, input, li, td, input[type="submit"], button {
-    font-size: $iphoneP;
-}
-label {
-    font-size: $iphoneP;
-    font-weight:900;
-}
 
 // HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO
 .hero {
@@ -51,6 +52,13 @@ label {
 }
 
 // textInformation textInformation textInformation textInformation 
+.leftSide {
+    grid-area: leftSide;
+}
+
+.rightSide {
+    grid-area: rightSide;
+}
 // info
 .info {
     grid-area: info;
@@ -66,8 +74,7 @@ label {
 .recipeButtons {
     grid-area: recipeButtons;
     width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin: 1vw 2vw 2vw 0;
 
     button {
         background-color: $ctaColor;
@@ -208,16 +215,7 @@ label {
 }
 
 @media only screen and (min-width: map-get($breakPoints, md)) {
-    .leftSide {
-        grid-area: leftSide;
-    }
-
-    .rightSide {
-        grid-area: rightSide;
-    }
-
     .recipeButtons {
-        grid-area: recipeButtons;
         width: 100%;
         margin-top: 1rem;
         margin-bottom: 0;
@@ -251,31 +249,25 @@ label {
         height: 22vw;
     }
 
-    h1 {
-        font-size: $ipadH1;
-    }
-    h2, th {
-        font-size: $ipadH2;
-    }
-    h3 {
-        font-size: $ipadH3;
-    }
-    p, input, li, td, input[type="submit"], button, label {
-        font-size: $ipadP;
+    main {
+        h1 {
+            font-size: $ipadH1;
+        }
+        h2, th {
+            font-size: $ipadH2;
+        }
+        h3 {
+            font-size: $ipadH3;
+        }
+        p, input, li, td, input[type="submit"], button, label {
+            font-size: $ipadP;
+        }
     }
 }
 
 @media only screen and (min-width: map-get($breakPoints, lg)) {
     .hero {
         height: 30vw;
-    }
-
-    .leftSide {
-        grid-area: leftSide;
-    }
-
-    .rightSide {
-        grid-area: rightSide;
     }
 
     .steps {
@@ -311,17 +303,19 @@ label {
         height: 16vw;
     }
 
-    h1 {
-        font-size: $pcH1;
-    }
-    h2, th {
-        font-size: $pcH2;
-    }
-    h3 {
-        font-size: $pcH3;
-    }
-    p, input, li, td, input[type="submit"], button, label {
-        font-size: $pcP;
+    main {
+        h1 {
+            font-size: $pcH1;
+        }
+        h2, th {
+            font-size: $pcH2;
+        }
+        h3 {
+            font-size: $pcH3;
+        }
+        p, input, li, td, input[type="submit"], button, label {
+            font-size: $pcP;
+        }
     }
 }
 
@@ -329,14 +323,6 @@ label {
     .hero {
         height: 20vw;
 
-    }
-
-    .leftSide {
-        grid-area: leftSide;
-    }
-
-    .rightSide {
-        grid-area: rightSide;
     }
 
     .steps {
@@ -372,16 +358,18 @@ label {
         height: 14vw;
     }
 
-    h1 {
-        font-size: $pcH1;
-    }
-    h2, th {
-        font-size: $pcH2;
-    }
-    h3 {
-        font-size: $pcH3;
-    }
-    p, input, li, td, input[type="submit"], button, label {
-        font-size: $pcP;
+    main {
+        h1 {
+            font-size: $pcH1;
+        }
+        h2, th {
+            font-size: $pcH2;
+        }
+        h3 {
+            font-size: $pcH3;
+        }
+        p, input, li, td, input[type="submit"], button, label {
+            font-size: $pcP;
+        }
     }
 }

@@ -13,7 +13,7 @@ main {
 form {
     position: relative;
     align-items: center;
-    .upload {
+    img {
         width: 6vw;
         height: auto;
         // position: absolute;
@@ -41,10 +41,10 @@ form {
         display: block;
         margin:auto;
     }
-    // .ingredient {
-    //     border: solid 0.1vw;
-    //     // border-radius: 0.5vw;
-    // }
+    .ingredient, .utensil, .step {
+        border: solid 0.1vw;
+        // border-radius: 0.5vw;
+    }
     .bars {
         width: 1vw;
         height: 1vw;
