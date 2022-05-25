@@ -436,7 +436,7 @@ h3 {
   font-size: 5vw;
 }
 
-p, input, li, td {
+p, input, li, td, input[type=submit], button {
   font-size: 3.8vw;
 }
 
@@ -518,13 +518,15 @@ label {
 }
 
 .nutrition td:first-child {
-  width: 70%;
+  width: 60%;
 }
 .nutrition td:nth-child(2) {
   width: 20%;
+  text-align: right;
+  padding-right: 1rem;
 }
 .nutrition td:last-child {
-  width: 10%;
+  width: 20%;
   text-align: right;
 }
 
