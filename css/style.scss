@@ -321,7 +321,7 @@ header {
 
 /*BODY      BODY        BODY        BODY        BODY        BODY        BODY        BODY        BODY*/
 body {
-    margin-top: 6vw;
+    margin-top: 20vw;
 }
 
 /*FOOTER        FOOTER      FOOTER        FOOTER        FOOTER        FOOTER        FOOTER        FOOTER*/
@@ -411,6 +411,9 @@ footer {
 }
 
 @media only screen and (min-width: map-get($breakPoints, md)) {
+    body {
+        margin-top: 6vw;
+    }
     footer {
         height: 35vw;
         display: grid;
@@ -483,6 +486,9 @@ footer {
 }
 
 @media only screen and (min-width: map-get($breakPoints, lg)) {
+    body {
+        margin-top: 6vw;
+    }
     footer {
         height: 13.5vw;
         display: grid;
@@ -561,6 +567,9 @@ footer {
 }
 
 @media only screen and (min-width: map-get($breakPoints, lg)) {
+    body {
+        margin-top: 6vw;
+    }
     footer {
         font-size: 1vw;
 

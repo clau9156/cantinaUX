@@ -229,7 +229,7 @@ header #menuB a {
 }
 /*BODY      BODY        BODY        BODY        BODY        BODY        BODY        BODY        BODY*/
 body {
-  margin-top: 6vw;
+  margin-top: 20vw;
 }
 
 /*FOOTER        FOOTER      FOOTER        FOOTER        FOOTER        FOOTER        FOOTER        FOOTER*/
@@ -300,6 +300,10 @@ footer section {
 }
 
 @media only screen and (min-width: 480px) {
+  body {
+    margin-top: 6vw;
+  }
+
   footer {
     height: 35vw;
     display: grid;
@@ -354,6 +358,10 @@ footer section {
   }
 }
 @media only screen and (min-width: 768px) {
+  body {
+    margin-top: 6vw;
+  }
+
   footer {
     height: 13.5vw;
     display: grid;
@@ -413,6 +421,10 @@ footer section {
   }
 }
 @media only screen and (min-width: 768px) {
+  body {
+    margin-top: 6vw;
+  }
+
   footer {
     font-size: 1vw;
   }
@@ -422,6 +434,7 @@ footer section {
 }
 main {
   font-family: "Roboto", sans-serif;
+  text-align: justify;
 }
 
 h1 {
@@ -469,7 +482,7 @@ label {
 
 .info {
   grid-area: info;
-  border-bottom: solid 0.2rem #f4a234;
+  box-shadow: 0 8px 8px -4px black;
   text-align: center;
 }
 .info ul li {
@@ -495,14 +508,15 @@ label {
 
 .description {
   grid-area: description;
-  margin: 1vw 2vw;
+  margin: 1vw 3.5vw;
 }
 
 .list {
+  text-align: start;
   margin: 2vw;
-  border: solid 0.2rem #f4a234;
   border-radius: 0.5rem;
   padding: 0.5rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 .list th {
   text-align: left;
@@ -545,43 +559,55 @@ label {
   grid-area: feedback;
   margin: 0.5rem;
 }
-.feedback .comment {
+.feedback div h3 {
+  margin-left: 0.5rem;
+}
+.feedback section h2 {
+  margin-left: 0.5rem;
+}
+.feedback .comments {
+  border: solid 0.2rem #f4a234;
+  border-radius: 0.5rem;
+}
+.feedback .comments .comment {
   display: grid;
   grid-template-columns: max-content;
   grid-template-areas: "img div";
-  border: solid 0.2rem #f4a234;
+  border-bottom: solid 0.2rem #f4a234;
 }
-.feedback .comment img {
+.feedback .comments .comment img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
   margin: 0.5rem;
 }
-.feedback .comment div {
+.feedback .comments .comment div {
   margin: 0.5rem;
 }
-.feedback .commenting {
-  border: solid 0.2rem #f4a234;
+.feedback .comments .comment div h3 {
+  margin: 0;
+}
+.feedback .comments .commenting {
   padding-top: 0.5rem;
 }
-.feedback .commenting label {
+.feedback .comments .commenting label {
   padding: 0 0 0 1rem;
 }
-.feedback .commenting textarea {
+.feedback .comments .commenting textarea {
   border: none;
   resize: none;
   width: 98%;
 }
-.feedback .commenting div {
+.feedback .comments .commenting div {
   width: 100%;
   height: 2.2rem;
 }
-.feedback .commenting div input {
+.feedback .comments .commenting div input[type=submit] {
   background-color: #6e1916;
   float: right;
-  padding: 0.5vw 1vw;
+  padding: 0.5vw 2vw;
   border: #6e1916 solid 0.1vw;
-  border-radius: 1vw;
+  border-radius: 0.5vw;
   cursor: pointer;
   color: white;
   margin-right: 1rem;
@@ -604,7 +630,7 @@ label {
   }
 
   .info {
-    border: solid 0.2rem #f4a234;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     margin: 0 0.7rem;
   }
@@ -620,6 +646,10 @@ label {
     grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
   }
 
+  .commenting {
+    height: 22vw;
+  }
+
   h1 {
     font-size: 4vw;
   }
@@ -629,14 +659,10 @@ label {
   }
 
   h3 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 
-  p, input, li, td {
-    font-size: 2.4vw;
-  }
-
-  label {
+  p, input, li, td, input[type=submit], button, label {
     font-size: 2.4vw;
   }
 }
@@ -659,7 +685,7 @@ label {
   }
 
   .info {
-    border: solid 0.2rem #f4a234;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     margin: 0 2vw;
   }
@@ -675,6 +701,10 @@ label {
     grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
   }
 
+  .commenting {
+    height: 16vw;
+  }
+
   h1 {
     font-size: 3.6vw;
   }
@@ -687,11 +717,7 @@ label {
     font-size: 2.5vw;
   }
 
-  p, input, li, td {
-    font-size: 1.8vw;
-  }
-
-  label {
+  p, input, li, td, input[type=submit], button, label {
     font-size: 1.8vw;
   }
 }
@@ -714,7 +740,7 @@ label {
   }
 
   .info {
-    border: solid 0.2rem #f4a234;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     margin: 0 2vw;
   }
@@ -730,6 +756,10 @@ label {
     grid-template-areas: "recipeButtons recipeButtons" "leftSide description" "leftSide info" "leftSide rightSide" "steps steps" "feedback feedback";
   }
 
+  .commenting {
+    height: 14vw;
+  }
+
   h1 {
     font-size: 3.6vw;
   }
@@ -742,11 +772,7 @@ label {
     font-size: 2.5vw;
   }
 
-  p, input, li, td {
-    font-size: 1.8vw;
-  }
-
-  label {
+  p, input, li, td, input[type=submit], button, label {
     font-size: 1.8vw;
   }
 }
