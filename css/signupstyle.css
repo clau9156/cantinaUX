@@ -644,17 +644,6 @@ button.upload img {
   margin: 0 .5rem;
 }
 
-@media only screen and (min-width: 480px) {
-  form {
-    padding-bottom: 0;
-  }
-  .clearfix .cancelbtn {
-    padding: 2vw 5vw;
-    font-size: 3.4vw;
-    margin-bottom: 2rem;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   main {
     display: -webkit-box;
@@ -676,6 +665,7 @@ button.upload img {
   }
   .clearfix .signupbtn {
     font-size: 1.4vw;
+    padding: 0.5vw 1vw;
   }
   button.upload {
     margin-right: 5rem;

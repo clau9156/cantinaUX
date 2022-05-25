@@ -103,22 +103,6 @@ button.upload {
 
 }
 
-//Tablet 
-@media only screen and (min-width: map-get($breakPoints, md)) {
-
-    form {
-        padding-bottom:0;
-    }
-
-    .clearfix .cancelbtn {
-    padding: 2vw 5vw;
-    font-size:3.4vw;
-    margin-bottom:2rem;
-    }
-
-}
-
-
 
 // Desktop
 
@@ -140,6 +124,8 @@ button.upload {
 
         .clearfix .signupbtn{
             font-size:1.4vw;
+            padding: 0.5vw 1vw;
+
         }
         button.upload{
             margin-right:5rem;

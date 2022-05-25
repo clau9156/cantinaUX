@@ -8,7 +8,7 @@
 /*HEADER        HEADER      HEADER      HEADER      HEADER      HEADER*/
 header {
   width: 100%;
-  height: 6vw;
+  height: 20vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,11 +21,13 @@ header {
   position: fixed;
   top: 0;
   z-index: 10;
+  font-size: 3.8vw;
+  /* BURGER MENU BURGER MENU BURGER MENU BURGER MENU  BURGER MENU  BURGER MENU  BURGER MENU  BURGER MENU  BURGER MENU */
 }
 
 header div {
-  height: 6vw;
-  width: 6vw;
+  height: 100%;
+  width: auto;
 }
 
 header div img {
@@ -34,20 +36,238 @@ header div img {
 }
 
 header nav {
-  width: 30vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: none;
 }
 
-header nav a {
+header #menuToggle {
+  display: block;
+  position: fixed;
+  top: 6vw;
+  left: 90vw;
+  z-index: 1;
+  border-radius: 0.3vw;
+}
+
+header #menuToggle input {
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  position: absolute;
+  top: -1vw;
+  left: -8vw;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+header #menuToggle span {
+  display: block;
+  width: 10vw;
+  height: 1.5vw;
+  left: -6vw;
+  margin-bottom: 1.4vw;
+  position: relative;
+  background-color: #f4a234;
+  border-radius: 1.5vw;
+  z-index: 1;
+  -webkit-transform-origin: 0.2vw 0;
+          transform-origin: 0.2vw 0;
+  -webkit-transition: opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+header #menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+header #menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+header #menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-0.5vw, -0.11vw);
+          transform: rotate(45deg) translate(-0.5vw, -0.11vw);
+}
+
+header #menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+header #menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(-0.1vw, 0.1vw);
+          transform: rotate(-45deg) translate(-0.1vw, 0.1vw);
+}
+
+header #menuToggle input:checked ~ #menuB {
+  -webkit-transform: none;
+          transform: none;
+}
+
+header #menuB {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  left: -20vw;
+  margin: 1vw 0 0 0;
+  padding: 1vw;
+  text-align: center;
+  border-radius: 2vw;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  background-color: rgba(244, 162, 52, 0.9);
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(32vw, 0);
+          transform: translate(32vw, 0);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.68, 0.39, 0.16, 1.31);
+  transition: -webkit-transform 1s cubic-bezier(0.68, 0.39, 0.16, 1.31);
+  transition: transform 1s cubic-bezier(0.68, 0.39, 0.16, 1.31);
+  transition: transform 1s cubic-bezier(0.68, 0.39, 0.16, 1.31), -webkit-transform 1s cubic-bezier(0.68, 0.39, 0.16, 1.31);
+}
+
+header #menuB a {
   text-decoration: none;
-  color: #f4a234;
+  color: #6e1916;
+}
+
+@media only screen and (min-width: 480px) {
+  header {
+    height: 10vw;
+    font-size: 2.4vw;
+  }
+  header nav {
+    display: block;
+    width: 60vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: relative;
+  }
+  header nav a {
+    text-decoration: none;
+    color: #f4a234;
+  }
+  header nav div:first-of-type {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 2.2vw;
+    left: 53vw;
+  }
+  header nav input {
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  header nav input:checked + #userMenu {
+    display: -ms-grid;
+    display: grid;
+  }
+  header nav #userMenu {
+    display: none;
+    position: fixed;
+    top: 4.5vw;
+    left: 74vw;
+    width: 20vw;
+    height: 15vw;
+    margin: 1vw 0 0 0;
+    padding: 1vw;
+    text-align: center;
+    border-radius: 0.5vw;
+    list-style: none;
+    background-color: rgba(244, 162, 52, 0.9);
+  }
+  header nav #userMenu a {
+    color: #6e1916;
+  }
+  header nav img {
+    height: 5vw;
+    width: 5vw;
+    background-color: white;
+    border-radius: 50%;
+  }
+  header #menuToggle {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    height: 6vw;
+    font-size: 1.8vw;
+  }
+  header nav {
+    width: 45vw;
+  }
+  header nav img {
+    width: 4vw;
+    height: 4vw;
+  }
+  header nav div:first-of-type {
+    width: 4vw;
+    height: 4vw;
+    top: 1vw;
+    left: 39.5vw;
+  }
+  header nav #userMenu {
+    top: 2.5vw;
+    left: 80vw;
+    width: 15vw;
+    height: 12vw;
+  }
+  header nav input {
+    width: 5vw;
+    height: 5vw;
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 1032px) {
+  header {
+    font-size: 1vw;
+  }
+  header nav {
+    width: 30vw;
+  }
+  header nav img {
+    width: 4vw;
+    height: 4vw;
+  }
+  header nav div:first-of-type {
+    width: 4vw;
+    height: 4vw;
+    top: 1vw;
+    left: 24.7vw;
+  }
+  header nav #userMenu {
+    left: 85vw;
+    width: 10vw;
+    height: 8vw;
+  }
+  header nav input {
+    width: 5vw;
+    height: 5vw;
+    opacity: 0;
+  }
 }
 
 /*BODY      BODY        BODY        BODY        BODY        BODY        BODY        BODY        BODY*/
@@ -59,12 +279,13 @@ body {
 footer {
   background-color: #1f5473;
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   bottom: 0;
   color: white;
   font-family: "Roboto", sans-serif;
   position: relative;
   overflow: hidden;
+  font-size: 3.8vw;
 }
 
 footer .footerLogo img {
@@ -139,6 +360,7 @@ footer li {
 footer h2 {
   font-family: "Oswald", sans-serif;
   padding-bottom: 0.5vw;
+  font-size: 6vw;
 }
 
 footer section {
@@ -152,6 +374,7 @@ footer section {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 2.4vw;
   }
   footer .footerLogo img {
     width: 25vw;
@@ -198,6 +421,8 @@ footer section {
   }
   footer h2 {
     padding-bottom: 0.5vw;
+    font-size: 3.4vw;
+    width: 80%;
   }
   footer section {
     margin-top: 1vw;
@@ -211,10 +436,11 @@ footer section {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-size: 1.8vw;
   }
   footer .footerLogo img {
     width: 13.5vw;
-    top: 0vw;
+    top: -1vw;
   }
   footer section img {
     width: 2.5vw;
@@ -266,10 +492,20 @@ footer section {
   footer h2 {
     padding-bottom: 0.5vw;
     width: 100%;
+    font-size: 3vw;
   }
   footer section {
     margin-top: 1vw;
     margin-right: 1vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    font-size: 1vw;
+  }
+  footer h2 {
+    font-size: 1.8vw;
   }
 }
 

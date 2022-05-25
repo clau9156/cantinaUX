@@ -1,0 +1,65 @@
+@import "style";
+
+// MAIN
+main {
+    margin-top:4rem;
+    height:100vh;
+    font-family: $paragraphFont;
+}
+
+h1 {
+    font-size: $phoneH1;
+}
+h2, th {
+    font-size: $iphoneH2;
+}
+h3 {
+    font-size: $iphoneH3;
+}
+p, input, li, td {
+    font-size: $iphoneP;
+}
+label {
+    font-size: $iphoneP;
+    font-weight:900;
+}
+
+section.searchWrapper {
+    margin-top:10vw;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    input {
+        margin-top:3rem;
+        width:80%;
+        height:3rem;
+        
+    }
+
+    input::placeholder{
+        padding-left:1rem;
+    }
+    img{
+        position:absolute;
+        top:17vw;
+        right:16vw;
+        text-align:right;
+        width:1rem;
+        height:1rem;
+    }
+}
+
+section.buttonWrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin:2rem 2rem;
+    select {
+        background:transparent;
+        width:1vw;
+    }
+}
