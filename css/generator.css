@@ -431,5 +431,90 @@ footer section {
   }
 }
 /*MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN*/
+main {
+  padding: 5vw;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.8vw;
+}
+main h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 8vw;
+  margin-bottom: 5vw;
+}
+main h2 {
+  font-size: 6vw;
+}
+main > section:first-of-type {
+  position: relative;
+  margin-bottom: 5vw;
+}
+main > section:first-of-type p {
+  filter: opacity(0.5);
+  margin-top: 1vw;
+}
+main > section:first-of-type img {
+  position: absolute;
+  top: 1vw;
+  right: 0;
+}
+main > section:first-of-type section form {
+  margin: 5vw 0 5vw 0;
+  position: relative;
+}
+main > section:first-of-type section form input {
+  width: 90%;
+  height: 8vw;
+  border-radius: 1vw;
+  border: 1px solid black;
+  padding: 0.5vw;
+}
+main > section:first-of-type section form img {
+  position: absolute;
+  right: 10vw;
+  top: 2vw;
+  width: 5vw;
+  height: auto;
+}
+main > section:first-of-type section section {
+  margin: 5vw 0 5vw 0;
+  display: grid;
+  grid-template-columns: repeat(2, 45vw);
+  row-gap: 5vw;
+}
+main > section:first-of-type span {
+  display: block;
+  width: 85vw;
+  height: 0.5vw;
+  background-color: #1f5473;
+  border-radius: 1vw;
+}
+main > :nth-last-child(2) p {
+  filter: opacity(0.5);
+}
+main > :nth-last-child(2) section form {
+  margin: 5vw 0 5vw 0;
+  position: relative;
+}
+main > :nth-last-child(2) section form input {
+  width: 90%;
+  height: 8vw;
+  border-radius: 1vw;
+  border: 1px solid black;
+  padding: 0.5vw;
+}
+main > :nth-last-child(2) section form img {
+  position: absolute;
+  right: 10vw;
+  top: 2vw;
+  width: 5vw;
+  height: auto;
+}
+main > :nth-last-child(2) section section {
+  margin: 5vw 0 5vw 0;
+  display: grid;
+  grid-template-columns: repeat(2, 45vw);
+  row-gap: 5vw;
+}
 
 /*# sourceMappingURL=generator.css.map */
